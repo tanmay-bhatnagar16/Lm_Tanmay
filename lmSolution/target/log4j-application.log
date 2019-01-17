@@ -1,0 +1,1443 @@
+2019-01-17 17:33:23 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:23 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:23 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:23 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:23 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:23 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:23 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:23 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:23 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:23 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:23 DEBUG wire:73 -  >> "Content-Length: 153[\r][\n]"
+2019-01-17 17:33:23 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:23 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:23 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:23 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:23 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:23 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:23 DEBUG headers:281 - >> Content-Length: 153
+2019-01-17 17:33:23 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:23 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:23 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:23 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.182446,"lat":22.375384},{"lng":114.186962,"lat":22.385669}],"orderAT":"2019-03-03T13:00:00.000Z"}"
+2019-01-17 17:33:24 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:24 GMT[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  << "Content-Length: 95[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:24 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:24 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:24 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:24 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:24 GMT
+2019-01-17 17:33:24 DEBUG headers:265 - << Content-Length: 95
+2019-01-17 17:33:24 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:24 DEBUG wire:73 -  << "{"id":679,"drivingDistancesInMeters":[10600,3082],"fare":{"amount":"312.05","currency":"HKD"}}[\n]"
+2019-01-17 17:33:24 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@797badd3
+2019-01-17 17:33:24 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:24 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:24 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:24 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:24 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:24 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:24 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:24 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:24 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:24 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  >> "Content-Length: 153[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:24 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:24 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:24 DEBUG headers:281 - >> Content-Length: 153
+2019-01-17 17:33:24 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:24 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:24 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:24 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.182446,"lat":22.375384},{"lng":114.186962,"lat":22.385669}],"orderAT":"2019-03-03T13:00:00.000Z"}"
+2019-01-17 17:33:24 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:24 GMT[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  << "Content-Length: 95[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:24 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:24 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:24 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:24 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:24 GMT
+2019-01-17 17:33:24 DEBUG headers:265 - << Content-Length: 95
+2019-01-17 17:33:24 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:24 DEBUG wire:73 -  << "{"id":680,"drivingDistancesInMeters":[10600,3082],"fare":{"amount":"312.05","currency":"HKD"}}[\n]"
+2019-01-17 17:33:24 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@1dd92fe2
+2019-01-17 17:33:24 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:24 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:24 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:24 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:24 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:24 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:24 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:24 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:24 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:24 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  >> "Content-Length: 118[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:24 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:24 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:24 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:24 DEBUG headers:281 - >> Content-Length: 118
+2019-01-17 17:33:24 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:24 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:24 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:25 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.126651,"lat":22.344674}],"orderAT":"2019-03-03T13:00:00.000Z"}"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:25 GMT[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "Content-Length: 88[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:25 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:25 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:25 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:25 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:25 GMT
+2019-01-17 17:33:25 DEBUG headers:265 - << Content-Length: 88
+2019-01-17 17:33:25 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:25 DEBUG wire:73 -  << "{"id":681,"drivingDistancesInMeters":[3224],"fare":{"amount":"50.60","currency":"HKD"}}[\n]"
+2019-01-17 17:33:25 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@57d5872c
+2019-01-17 17:33:25 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:25 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:25 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:25 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:25 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:25 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:25 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:25 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:25 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Content-Length: 118[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:25 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:25 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:25 DEBUG headers:281 - >> Content-Length: 118
+2019-01-17 17:33:25 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:25 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:25 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:25 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.126651,"lat":22.344674}],"orderAT":"2019-03-03T02:00:00.000Z"}"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:25 GMT[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "Content-Length: 88[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:25 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:25 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:25 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:25 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:25 GMT
+2019-01-17 17:33:25 DEBUG headers:265 - << Content-Length: 88
+2019-01-17 17:33:25 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:25 DEBUG wire:73 -  << "{"id":682,"drivingDistancesInMeters":[3224],"fare":{"amount":"78.96","currency":"HKD"}}[\n]"
+2019-01-17 17:33:25 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@25b485ba
+2019-01-17 17:33:25 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:25 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:25 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:25 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:25 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:25 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:25 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:25 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:25 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Content-Length: 118[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:25 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:25 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:25 DEBUG headers:281 - >> Content-Length: 118
+2019-01-17 17:33:25 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:25 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:25 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:25 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.124351,"lat":22.344674}],"orderAT":"2019-03-03T13:00:00.000Z"}"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:25 GMT[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "Content-Length: 85[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:25 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:25 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:25 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:25 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:25 GMT
+2019-01-17 17:33:25 DEBUG headers:265 - << Content-Length: 85
+2019-01-17 17:33:25 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:25 DEBUG wire:73 -  << "{"id":683,"drivingDistancesInMeters":[0],"fare":{"amount":"20.00","currency":"HKD"}}[\n]"
+2019-01-17 17:33:25 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5906ebcb
+2019-01-17 17:33:25 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:25 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:25 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:25 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:25 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:25 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:25 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:25 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:25 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Content-Length: 118[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:25 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:25 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:25 DEBUG headers:281 - >> Content-Length: 118
+2019-01-17 17:33:25 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:25 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:25 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:25 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.124351,"lat":22.344674}],"orderAT":"2019-03-03T02:00:00.000Z"}"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:25 GMT[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "Content-Length: 85[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:25 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:25 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:25 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:25 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:25 GMT
+2019-01-17 17:33:25 DEBUG headers:265 - << Content-Length: 85
+2019-01-17 17:33:25 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:25 DEBUG wire:73 -  << "{"id":684,"drivingDistancesInMeters":[0],"fare":{"amount":"30.00","currency":"HKD"}}[\n]"
+2019-01-17 17:33:25 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@a4102b8
+2019-01-17 17:33:25 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:25 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:25 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:25 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:25 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:25 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:25 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:25 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:25 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Content-Length: 116[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:25 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:25 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:25 DEBUG headers:281 - >> Content-Length: 116
+2019-01-17 17:33:25 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:25 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:25 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:25 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.182446,"lat":22.375384},{"lng":114.186962,"lat":22.385669}]}"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:25 GMT[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "Content-Length: 95[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:25 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:25 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:25 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:25 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:25 GMT
+2019-01-17 17:33:25 DEBUG headers:265 - << Content-Length: 95
+2019-01-17 17:33:25 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:25 DEBUG wire:73 -  << "{"id":685,"drivingDistancesInMeters":[10600,3082],"fare":{"amount":"312.05","currency":"HKD"}}[\n]"
+2019-01-17 17:33:25 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@4c15e7fd
+2019-01-17 17:33:25 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:25 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:25 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:25 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:25 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:25 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:25 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:25 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:25 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Content-Length: 81[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:25 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:25 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:25 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:25 DEBUG headers:281 - >> Content-Length: 81
+2019-01-17 17:33:25 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:25 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:25 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:25 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.126651,"lat":22.344674}]}"
+2019-01-17 17:33:26 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:26 GMT[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  << "Content-Length: 88[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:26 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:26 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:26 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:26 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:26 GMT
+2019-01-17 17:33:26 DEBUG headers:265 - << Content-Length: 88
+2019-01-17 17:33:26 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:26 DEBUG wire:73 -  << "{"id":686,"drivingDistancesInMeters":[3224],"fare":{"amount":"50.60","currency":"HKD"}}[\n]"
+2019-01-17 17:33:26 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@d706f19
+2019-01-17 17:33:26 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:26 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:26 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:26 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:26 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:26 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:26 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:26 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:26 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "Content-Length: 81[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:26 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:26 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:26 DEBUG headers:281 - >> Content-Length: 81
+2019-01-17 17:33:26 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:26 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:26 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:26 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.124351,"lat":22.344674}]}"
+2019-01-17 17:33:26 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56910<->127.0.0.1:51544 closed
+2019-01-17 17:33:26 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56909<->127.0.0.1:51544 closed
+2019-01-17 17:33:26 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56908<->127.0.0.1:51544 closed
+2019-01-17 17:33:26 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56907<->127.0.0.1:51544 closed
+2019-01-17 17:33:26 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56906<->127.0.0.1:51544 closed
+2019-01-17 17:33:26 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56905<->127.0.0.1:51544 closed
+2019-01-17 17:33:26 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56904<->127.0.0.1:51544 closed
+2019-01-17 17:33:26 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56902<->127.0.0.1:51544 closed
+2019-01-17 17:33:26 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:26 GMT[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  << "Content-Length: 85[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:26 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:26 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:26 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:26 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:26 GMT
+2019-01-17 17:33:26 DEBUG headers:265 - << Content-Length: 85
+2019-01-17 17:33:26 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:26 DEBUG wire:73 -  << "{"id":687,"drivingDistancesInMeters":[0],"fare":{"amount":"20.00","currency":"HKD"}}[\n]"
+2019-01-17 17:33:26 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@419c5f1a
+2019-01-17 17:33:26 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:26 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:26 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:26 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:26 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:26 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:26 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:26 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:26 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "Content-Length: 116[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:26 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:26 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:26 DEBUG headers:281 - >> Content-Length: 116
+2019-01-17 17:33:26 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:26 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:26 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:26 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.182446,"lat":22.375384},{"lng":114.186962,"lat":22.385669}]}"
+2019-01-17 17:33:26 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:26 GMT[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  << "Content-Length: 95[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:26 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:26 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:26 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:26 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:26 GMT
+2019-01-17 17:33:26 DEBUG headers:265 - << Content-Length: 95
+2019-01-17 17:33:26 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:26 DEBUG wire:73 -  << "{"id":688,"drivingDistancesInMeters":[10600,3082],"fare":{"amount":"312.05","currency":"HKD"}}[\n]"
+2019-01-17 17:33:26 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@60d8c9b7
+2019-01-17 17:33:26 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:26 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:26 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:26 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:26 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:26 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:26 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:26 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:26 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "Content-Length: 116[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:26 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:26 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:26 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:26 DEBUG headers:281 - >> Content-Length: 116
+2019-01-17 17:33:26 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:26 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:26 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:26 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.182446,"lat":22.375384},{"lng":114.186962,"lat":22.385669}]}"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:27 GMT[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Content-Length: 95[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:27 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:27 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:27 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:27 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:27 GMT
+2019-01-17 17:33:27 DEBUG headers:265 - << Content-Length: 95
+2019-01-17 17:33:27 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:27 DEBUG wire:73 -  << "{"id":689,"drivingDistancesInMeters":[10600,3082],"fare":{"amount":"312.05","currency":"HKD"}}[\n]"
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@35047d03
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:27 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:27 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:27 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:27 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:27 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:27 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:27 DEBUG DefaultClientConnection:274 - Sending request: GET /v1/orders/690 HTTP/1.1
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "GET /v1/orders/690 HTTP/1.1[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:27 DEBUG headers:278 - >> GET /v1/orders/690 HTTP/1.1
+2019-01-17 17:33:27 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:27 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:27 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:27 DEBUG wire:73 -  << "HTTP/1.1 404 Not Found[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:27 GMT[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Content-Length: 30[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:27 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 404 Not Found
+2019-01-17 17:33:27 DEBUG headers:262 - << HTTP/1.1 404 Not Found
+2019-01-17 17:33:27 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:27 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:27 GMT
+2019-01-17 17:33:27 DEBUG headers:265 - << Content-Length: 30
+2019-01-17 17:33:27 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:27 DEBUG wire:73 -  << "{"message":"ORDER_NOT_FOUND"}[\n]"
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@10e41621
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:27 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:27 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:27 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:27 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:27 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:27 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:27 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Content-Length: 116[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:27 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:27 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:27 DEBUG headers:281 - >> Content-Length: 116
+2019-01-17 17:33:27 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:27 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:27 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:27 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.182446,"lat":22.375384},{"lng":114.186962,"lat":22.385669}]}"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:27 GMT[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Content-Length: 95[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:27 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:27 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:27 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:27 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:27 GMT
+2019-01-17 17:33:27 DEBUG headers:265 - << Content-Length: 95
+2019-01-17 17:33:27 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:27 DEBUG wire:73 -  << "{"id":690,"drivingDistancesInMeters":[10600,3082],"fare":{"amount":"312.05","currency":"HKD"}}[\n]"
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@4f209819
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:27 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:27 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:27 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:27 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:27 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:27 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:27 DEBUG DefaultClientConnection:274 - Sending request: GET /v1/orders/690 HTTP/1.1
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "GET /v1/orders/690 HTTP/1.1[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:27 DEBUG headers:278 - >> GET /v1/orders/690 HTTP/1.1
+2019-01-17 17:33:27 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:27 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:27 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:27 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:27 GMT[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Content-Length: 307[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:27 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
+2019-01-17 17:33:27 DEBUG headers:262 - << HTTP/1.1 200 OK
+2019-01-17 17:33:27 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:27 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:27 GMT
+2019-01-17 17:33:27 DEBUG headers:265 - << Content-Length: 307
+2019-01-17 17:33:27 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:27 DEBUG wire:73 -  << "{"id":690,"stops":[{"lat":22.344674,"lng":114.124651},{"lat":22.375384,"lng":114.182446},{"lat":22.385669,"lng":114.186962}],"drivingDistancesInMeters":[10600,3082],"fare":{"amount":"312.05","currency":"HKD"},"status":"ASSIGNING","orderDateTime":"2019-01-17T12:03:27Z","createdTime":"2019-01-17T12:03:27Z"}[\n]"
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6a192cfe
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:27 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:27 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:27 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:27 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:27 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:27 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:27 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Content-Length: 116[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:27 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:27 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:27 DEBUG headers:281 - >> Content-Length: 116
+2019-01-17 17:33:27 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:27 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:27 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:27 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.182446,"lat":22.375384},{"lng":114.186962,"lat":22.385669}]}"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:27 GMT[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Content-Length: 95[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:27 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:27 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:27 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:27 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:27 GMT
+2019-01-17 17:33:27 DEBUG headers:265 - << Content-Length: 95
+2019-01-17 17:33:27 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:27 DEBUG wire:73 -  << "{"id":691,"drivingDistancesInMeters":[10600,3082],"fare":{"amount":"312.05","currency":"HKD"}}[\n]"
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5fdcaa40
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:27 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:27 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:27 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:27 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:27 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:27 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:27 DEBUG DefaultClientConnection:274 - Sending request: PUT /v1/orders/691/cancel HTTP/1.1
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "PUT /v1/orders/691/cancel HTTP/1.1[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Content-Length: 0[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:27 DEBUG headers:278 - >> PUT /v1/orders/691/cancel HTTP/1.1
+2019-01-17 17:33:27 DEBUG headers:281 - >> Content-Length: 0
+2019-01-17 17:33:27 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:27 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:27 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:27 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:27 GMT[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Content-Length: 77[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:27 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
+2019-01-17 17:33:27 DEBUG headers:262 - << HTTP/1.1 200 OK
+2019-01-17 17:33:27 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:27 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:27 GMT
+2019-01-17 17:33:27 DEBUG headers:265 - << Content-Length: 77
+2019-01-17 17:33:27 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:27 DEBUG wire:73 -  << "{"id":691,"status":"CANCELLED","cancelledAt":"2019-01-17T12:03:27.7715102Z"}[\n]"
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@59309333
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:27 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:27 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:27 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:27 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:27 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:27 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:27 DEBUG DefaultClientConnection:274 - Sending request: PUT /v1/orders/691/take HTTP/1.1
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "PUT /v1/orders/691/take HTTP/1.1[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Content-Length: 0[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:27 DEBUG headers:278 - >> PUT /v1/orders/691/take HTTP/1.1
+2019-01-17 17:33:27 DEBUG headers:281 - >> Content-Length: 0
+2019-01-17 17:33:27 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:27 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:27 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:27 DEBUG wire:73 -  << "HTTP/1.1 422 Unprocessable Entity[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:27 GMT[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Content-Length: 44[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:27 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 422 Unprocessable Entity
+2019-01-17 17:33:27 DEBUG headers:262 - << HTTP/1.1 422 Unprocessable Entity
+2019-01-17 17:33:27 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:27 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:27 GMT
+2019-01-17 17:33:27 DEBUG headers:265 - << Content-Length: 44
+2019-01-17 17:33:27 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:27 DEBUG wire:73 -  << "{"message":"Order status is not ASSIGNING"}[\n]"
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@223d2c72
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:27 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:27 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:27 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:27 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:27 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:27 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:27 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Content-Length: 116[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:27 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:27 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:27 DEBUG headers:281 - >> Content-Length: 116
+2019-01-17 17:33:27 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:27 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:27 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:27 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.182446,"lat":22.375384},{"lng":114.186962,"lat":22.385669}]}"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:27 GMT[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "Content-Length: 95[\r][\n]"
+2019-01-17 17:33:27 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:27 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:27 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:27 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:27 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:27 GMT
+2019-01-17 17:33:27 DEBUG headers:265 - << Content-Length: 95
+2019-01-17 17:33:27 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:27 DEBUG wire:73 -  << "{"id":692,"drivingDistancesInMeters":[10600,3082],"fare":{"amount":"312.05","currency":"HKD"}}[\n]"
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6aeb35e6
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:27 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:27 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:28 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:28 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:28 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:274 - Sending request: PUT /v1/orders/693/take HTTP/1.1
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "PUT /v1/orders/693/take HTTP/1.1[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Content-Length: 0[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:28 DEBUG headers:278 - >> PUT /v1/orders/693/take HTTP/1.1
+2019-01-17 17:33:28 DEBUG headers:281 - >> Content-Length: 0
+2019-01-17 17:33:28 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:28 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:28 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:28 DEBUG wire:73 -  << "HTTP/1.1 404 Not Found[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:28 GMT[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Length: 30[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 404 Not Found
+2019-01-17 17:33:28 DEBUG headers:262 - << HTTP/1.1 404 Not Found
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:28 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:28 GMT
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Length: 30
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG wire:73 -  << "{"message":"ORDER_NOT_FOUND"}[\n]"
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@692f203f
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:28 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:28 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:28 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:28 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Content-Length: 116[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:28 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:28 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:28 DEBUG headers:281 - >> Content-Length: 116
+2019-01-17 17:33:28 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:28 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:28 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:28 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.182446,"lat":22.375384},{"lng":114.186962,"lat":22.385669}]}"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:28 GMT[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Length: 95[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:28 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:28 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:28 GMT
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Length: 95
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG wire:73 -  << "{"id":693,"drivingDistancesInMeters":[10600,3082],"fare":{"amount":"312.05","currency":"HKD"}}[\n]"
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@411f53a0
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:28 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:28 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:28 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:28 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:274 - Sending request: PUT /v1/orders/693/take HTTP/1.1
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "PUT /v1/orders/693/take HTTP/1.1[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Content-Length: 0[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:28 DEBUG headers:278 - >> PUT /v1/orders/693/take HTTP/1.1
+2019-01-17 17:33:28 DEBUG headers:281 - >> Content-Length: 0
+2019-01-17 17:33:28 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:28 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:28 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:28 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:28 GMT[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Length: 75[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
+2019-01-17 17:33:28 DEBUG headers:262 - << HTTP/1.1 200 OK
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:28 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:28 GMT
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Length: 75
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG wire:73 -  << "{"id":693,"status":"ONGOING","ongoingTime":"2019-01-17T12:03:28.2259031Z"}[\n]"
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@4c402120
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:28 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:28 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:28 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:28 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Content-Length: 116[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:28 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:28 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:28 DEBUG headers:281 - >> Content-Length: 116
+2019-01-17 17:33:28 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:28 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:28 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:28 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.182446,"lat":22.375384},{"lng":114.186962,"lat":22.385669}]}"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:28 GMT[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Length: 95[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:28 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:28 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:28 GMT
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Length: 95
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG wire:73 -  << "{"id":694,"drivingDistancesInMeters":[10600,3082],"fare":{"amount":"312.05","currency":"HKD"}}[\n]"
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@3b0090a4
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:28 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:28 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:28 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:28 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:274 - Sending request: PUT /v1/orders/694/cancel HTTP/1.1
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "PUT /v1/orders/694/cancel HTTP/1.1[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Content-Length: 0[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:28 DEBUG headers:278 - >> PUT /v1/orders/694/cancel HTTP/1.1
+2019-01-17 17:33:28 DEBUG headers:281 - >> Content-Length: 0
+2019-01-17 17:33:28 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:28 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:28 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:28 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:28 GMT[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Length: 77[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
+2019-01-17 17:33:28 DEBUG headers:262 - << HTTP/1.1 200 OK
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:28 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:28 GMT
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Length: 77
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG wire:73 -  << "{"id":694,"status":"CANCELLED","cancelledAt":"2019-01-17T12:03:28.4551241Z"}[\n]"
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@2aceadd4
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:28 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:28 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:28 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:28 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:274 - Sending request: PUT /v1/orders/694/complete HTTP/1.1
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "PUT /v1/orders/694/complete HTTP/1.1[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Content-Length: 0[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:28 DEBUG headers:278 - >> PUT /v1/orders/694/complete HTTP/1.1
+2019-01-17 17:33:28 DEBUG headers:281 - >> Content-Length: 0
+2019-01-17 17:33:28 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:28 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:28 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:28 DEBUG wire:73 -  << "HTTP/1.1 422 Unprocessable Entity[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:28 GMT[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Length: 42[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 422 Unprocessable Entity
+2019-01-17 17:33:28 DEBUG headers:262 - << HTTP/1.1 422 Unprocessable Entity
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:28 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:28 GMT
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Length: 42
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG wire:73 -  << "{"message":"Order status is not ONGOING"}[\n]"
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@2df3b89c
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:28 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:28 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:28 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:28 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Content-Length: 116[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:28 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:28 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:28 DEBUG headers:281 - >> Content-Length: 116
+2019-01-17 17:33:28 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:28 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:28 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:28 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.182446,"lat":22.375384},{"lng":114.186962,"lat":22.385669}]}"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:28 GMT[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Length: 95[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:28 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:28 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:28 GMT
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Length: 95
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG wire:73 -  << "{"id":695,"drivingDistancesInMeters":[10600,3082],"fare":{"amount":"312.05","currency":"HKD"}}[\n]"
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@33c911a1
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:28 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:28 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:28 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:28 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:274 - Sending request: PUT /v1/orders/695/take HTTP/1.1
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "PUT /v1/orders/695/take HTTP/1.1[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Content-Length: 0[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:28 DEBUG headers:278 - >> PUT /v1/orders/695/take HTTP/1.1
+2019-01-17 17:33:28 DEBUG headers:281 - >> Content-Length: 0
+2019-01-17 17:33:28 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:28 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:28 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:28 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:28 GMT[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Length: 75[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
+2019-01-17 17:33:28 DEBUG headers:262 - << HTTP/1.1 200 OK
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:28 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:28 GMT
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Length: 75
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG wire:73 -  << "{"id":695,"status":"ONGOING","ongoingTime":"2019-01-17T12:03:28.7187482Z"}[\n]"
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@37883b97
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:28 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:28 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:28 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:28 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:274 - Sending request: PUT /v1/orders/696/complete HTTP/1.1
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "PUT /v1/orders/696/complete HTTP/1.1[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Content-Length: 0[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:28 DEBUG headers:278 - >> PUT /v1/orders/696/complete HTTP/1.1
+2019-01-17 17:33:28 DEBUG headers:281 - >> Content-Length: 0
+2019-01-17 17:33:28 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:28 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:28 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:28 DEBUG wire:73 -  << "HTTP/1.1 404 Not Found[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:28 GMT[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Length: 30[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 404 Not Found
+2019-01-17 17:33:28 DEBUG headers:262 - << HTTP/1.1 404 Not Found
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:28 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:28 GMT
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Length: 30
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG wire:73 -  << "{"message":"ORDER_NOT_FOUND"}[\n]"
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@623a8092
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:28 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:28 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:28 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:28 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Content-Length: 116[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:28 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:28 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:28 DEBUG headers:281 - >> Content-Length: 116
+2019-01-17 17:33:28 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:28 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:28 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:28 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.182446,"lat":22.375384},{"lng":114.186962,"lat":22.385669}]}"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:28 GMT[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Length: 95[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:28 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:28 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:28 GMT
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Length: 95
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG wire:73 -  << "{"id":696,"drivingDistancesInMeters":[10600,3082],"fare":{"amount":"312.05","currency":"HKD"}}[\n]"
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@1d8bd0de
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56914<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56916<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56915<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56913<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56912<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56911<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:28 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56923<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56922<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56921<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:274 - Sending request: PUT /v1/orders/696/take HTTP/1.1
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56920<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "PUT /v1/orders/696/take HTTP/1.1[\r][\n]"
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56919<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Content-Length: 0[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56918<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56917<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56930<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG headers:278 - >> PUT /v1/orders/696/take HTTP/1.1
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56929<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG headers:281 - >> Content-Length: 0
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56928<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:28 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:28 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56927<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56926<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56925<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:180 - Connection 0.0.0.0:56924<->127.0.0.1:51544 closed
+2019-01-17 17:33:28 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:28 GMT[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Length: 75[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
+2019-01-17 17:33:28 DEBUG headers:262 - << HTTP/1.1 200 OK
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:28 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:28 GMT
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Length: 75
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG wire:73 -  << "{"id":696,"status":"ONGOING","ongoingTime":"2019-01-17T12:03:28.9688254Z"}[\n]"
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@78ffe6dc
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:28 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:28 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:28 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:28 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:274 - Sending request: PUT /v1/orders/696/complete HTTP/1.1
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "PUT /v1/orders/696/complete HTTP/1.1[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Content-Length: 0[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:28 DEBUG headers:278 - >> PUT /v1/orders/696/complete HTTP/1.1
+2019-01-17 17:33:28 DEBUG headers:281 - >> Content-Length: 0
+2019-01-17 17:33:28 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:28 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:28 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:28 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:28 GMT[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "Content-Length: 77[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
+2019-01-17 17:33:28 DEBUG headers:262 - << HTTP/1.1 200 OK
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:28 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:28 GMT
+2019-01-17 17:33:28 DEBUG headers:265 - << Content-Length: 77
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG wire:73 -  << "{"id":696,"status":"COMPLETED","completedAt":"2019-01-17T12:03:28.9850138Z"}[\n]"
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@55b53d44
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:28 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:28 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:28 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:28 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:28 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:28 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:28 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Content-Length: 116[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:28 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:28 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:28 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:28 DEBUG headers:281 - >> Content-Length: 116
+2019-01-17 17:33:28 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:28 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:28 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:28 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.182446,"lat":22.375384},{"lng":114.186962,"lat":22.385669}]}"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:29 GMT[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Length: 95[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:29 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:29 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:29 GMT
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Length: 95
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG wire:73 -  << "{"id":697,"drivingDistancesInMeters":[10600,3082],"fare":{"amount":"312.05","currency":"HKD"}}[\n]"
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@2e55dd0c
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:29 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:29 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:29 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:29 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:274 - Sending request: PUT /v1/orders/698/cancel HTTP/1.1
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "PUT /v1/orders/698/cancel HTTP/1.1[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Content-Length: 0[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:29 DEBUG headers:278 - >> PUT /v1/orders/698/cancel HTTP/1.1
+2019-01-17 17:33:29 DEBUG headers:281 - >> Content-Length: 0
+2019-01-17 17:33:29 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:29 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:29 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:29 DEBUG wire:73 -  << "HTTP/1.1 404 Not Found[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:29 GMT[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Length: 30[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 404 Not Found
+2019-01-17 17:33:29 DEBUG headers:262 - << HTTP/1.1 404 Not Found
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:29 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:29 GMT
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Length: 30
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG wire:73 -  << "{"message":"ORDER_NOT_FOUND"}[\n]"
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@6631f5ca
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:29 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:29 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:29 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:29 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Content-Length: 116[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:29 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:29 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:29 DEBUG headers:281 - >> Content-Length: 116
+2019-01-17 17:33:29 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:29 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:29 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:29 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.182446,"lat":22.375384},{"lng":114.186962,"lat":22.385669}]}"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:29 GMT[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Length: 95[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:29 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:29 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:29 GMT
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Length: 95
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG wire:73 -  << "{"id":698,"drivingDistancesInMeters":[10600,3082],"fare":{"amount":"312.05","currency":"HKD"}}[\n]"
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@2df9b86
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:29 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:29 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:29 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:29 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:274 - Sending request: PUT /v1/orders/698/cancel HTTP/1.1
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "PUT /v1/orders/698/cancel HTTP/1.1[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Content-Length: 0[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:29 DEBUG headers:278 - >> PUT /v1/orders/698/cancel HTTP/1.1
+2019-01-17 17:33:29 DEBUG headers:281 - >> Content-Length: 0
+2019-01-17 17:33:29 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:29 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:29 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:29 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:29 GMT[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Length: 77[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
+2019-01-17 17:33:29 DEBUG headers:262 - << HTTP/1.1 200 OK
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:29 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:29 GMT
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Length: 77
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG wire:73 -  << "{"id":698,"status":"CANCELLED","cancelledAt":"2019-01-17T12:03:29.4315157Z"}[\n]"
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@28f3b248
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:29 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:29 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:29 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:29 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Content-Length: 116[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:29 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:29 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:29 DEBUG headers:281 - >> Content-Length: 116
+2019-01-17 17:33:29 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:29 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:29 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:29 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.182446,"lat":22.375384},{"lng":114.186962,"lat":22.385669}]}"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:29 GMT[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Length: 95[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:29 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:29 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:29 GMT
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Length: 95
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG wire:73 -  << "{"id":699,"drivingDistancesInMeters":[10600,3082],"fare":{"amount":"312.05","currency":"HKD"}}[\n]"
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@20ccf40b
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:29 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:29 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:29 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:29 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:274 - Sending request: PUT /v1/orders/699/take HTTP/1.1
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "PUT /v1/orders/699/take HTTP/1.1[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Content-Length: 0[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:29 DEBUG headers:278 - >> PUT /v1/orders/699/take HTTP/1.1
+2019-01-17 17:33:29 DEBUG headers:281 - >> Content-Length: 0
+2019-01-17 17:33:29 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:29 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:29 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:29 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:29 GMT[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Length: 75[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
+2019-01-17 17:33:29 DEBUG headers:262 - << HTTP/1.1 200 OK
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:29 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:29 GMT
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Length: 75
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG wire:73 -  << "{"id":699,"status":"ONGOING","ongoingTime":"2019-01-17T12:03:29.6548711Z"}[\n]"
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5ba3f27a
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:29 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:29 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:29 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:29 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:274 - Sending request: PUT /v1/orders/699/cancel HTTP/1.1
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "PUT /v1/orders/699/cancel HTTP/1.1[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Content-Length: 0[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:29 DEBUG headers:278 - >> PUT /v1/orders/699/cancel HTTP/1.1
+2019-01-17 17:33:29 DEBUG headers:281 - >> Content-Length: 0
+2019-01-17 17:33:29 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:29 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:29 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:29 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:29 GMT[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Length: 77[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
+2019-01-17 17:33:29 DEBUG headers:262 - << HTTP/1.1 200 OK
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:29 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:29 GMT
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Length: 77
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG wire:73 -  << "{"id":699,"status":"CANCELLED","cancelledAt":"2019-01-17T12:03:29.6698936Z"}[\n]"
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@17497425
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:29 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:29 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:29 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:29 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:274 - Sending request: POST /v1/orders HTTP/1.1
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "POST /v1/orders HTTP/1.1[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Content-type: application/json[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Content-Length: 116[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:29 DEBUG headers:278 - >> POST /v1/orders HTTP/1.1
+2019-01-17 17:33:29 DEBUG headers:281 - >> Content-type: application/json
+2019-01-17 17:33:29 DEBUG headers:281 - >> Content-Length: 116
+2019-01-17 17:33:29 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:29 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:29 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:29 DEBUG wire:87 -  >> "{"stops":[{"lng":114.124651,"lat":22.344674},{"lng":114.182446,"lat":22.375384},{"lng":114.186962,"lat":22.385669}]}"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "HTTP/1.1 201 Created[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:29 GMT[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Length: 95[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 201 Created
+2019-01-17 17:33:29 DEBUG headers:262 - << HTTP/1.1 201 Created
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:29 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:29 GMT
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Length: 95
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG wire:73 -  << "{"id":700,"drivingDistancesInMeters":[10600,3082],"fare":{"amount":"312.05","currency":"HKD"}}[\n]"
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@27f981c6
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:29 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:29 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:29 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:29 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:274 - Sending request: PUT /v1/orders/700/take HTTP/1.1
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "PUT /v1/orders/700/take HTTP/1.1[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Content-Length: 0[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:29 DEBUG headers:278 - >> PUT /v1/orders/700/take HTTP/1.1
+2019-01-17 17:33:29 DEBUG headers:281 - >> Content-Length: 0
+2019-01-17 17:33:29 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:29 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:29 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:29 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:29 GMT[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Length: 75[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
+2019-01-17 17:33:29 DEBUG headers:262 - << HTTP/1.1 200 OK
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:29 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:29 GMT
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Length: 75
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG wire:73 -  << "{"id":700,"status":"ONGOING","ongoingTime":"2019-01-17T12:03:29.8920122Z"}[\n]"
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@5a45133e
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:29 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:29 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:29 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:29 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:274 - Sending request: PUT /v1/orders/700/complete HTTP/1.1
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "PUT /v1/orders/700/complete HTTP/1.1[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Content-Length: 0[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:29 DEBUG headers:278 - >> PUT /v1/orders/700/complete HTTP/1.1
+2019-01-17 17:33:29 DEBUG headers:281 - >> Content-Length: 0
+2019-01-17 17:33:29 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:29 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:29 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:29 DEBUG wire:73 -  << "HTTP/1.1 200 OK[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:29 GMT[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Length: 76[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 200 OK
+2019-01-17 17:33:29 DEBUG headers:262 - << HTTP/1.1 200 OK
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:29 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:29 GMT
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Length: 76
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG wire:73 -  << "{"id":700,"status":"COMPLETED","completedAt":"2019-01-17T12:03:29.906418Z"}[\n]"
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@41a0aa7d
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:161 - Get connection for route {}->http://localhost:51544
+2019-01-17 17:33:29 DEBUG DefaultClientConnectionOperator:177 - Connecting to localhost:51544
+2019-01-17 17:33:29 DEBUG RequestAddCookies:123 - CookieSpec selected: default
+2019-01-17 17:33:29 DEBUG RequestAuthCache:77 - Auth cache not set in the context
+2019-01-17 17:33:29 DEBUG RequestTargetAuthentication:80 - Target auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG RequestProxyAuthentication:89 - Proxy auth state: UNCHALLENGED
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:682 - Attempt 1 to execute request
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:274 - Sending request: PUT /v1/orders/700/cancel HTTP/1.1
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "PUT /v1/orders/700/cancel HTTP/1.1[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Content-Length: 0[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Host: localhost:51544[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "Connection: Keep-Alive[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  >> "[\r][\n]"
+2019-01-17 17:33:29 DEBUG headers:278 - >> PUT /v1/orders/700/cancel HTTP/1.1
+2019-01-17 17:33:29 DEBUG headers:281 - >> Content-Length: 0
+2019-01-17 17:33:29 DEBUG headers:281 - >> Host: localhost:51544
+2019-01-17 17:33:29 DEBUG headers:281 - >> Connection: Keep-Alive
+2019-01-17 17:33:29 DEBUG headers:281 - >> User-Agent: Apache-HttpClient/4.5.6 (Java/1.8.0_191)
+2019-01-17 17:33:29 DEBUG wire:73 -  << "HTTP/1.1 422 Unprocessable Entity[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Type: application/json; charset=utf-8[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Date: Thu, 17 Jan 2019 12:03:29 GMT[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "Content-Length: 48[\r][\n]"
+2019-01-17 17:33:29 DEBUG wire:73 -  << "[\r][\n]"
+2019-01-17 17:33:29 DEBUG DefaultClientConnection:259 - Receiving response: HTTP/1.1 422 Unprocessable Entity
+2019-01-17 17:33:29 DEBUG headers:262 - << HTTP/1.1 422 Unprocessable Entity
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Type: application/json; charset=utf-8
+2019-01-17 17:33:29 DEBUG headers:265 - << Date: Thu, 17 Jan 2019 12:03:29 GMT
+2019-01-17 17:33:29 DEBUG headers:265 - << Content-Length: 48
+2019-01-17 17:33:29 DEBUG DefaultHttpClient:509 - Connection can be kept alive indefinitely
+2019-01-17 17:33:29 DEBUG wire:73 -  << "{"message":"Order status is COMPLETED already"}[\n]"
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:200 - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@644baf4a
+2019-01-17 17:33:29 DEBUG BasicClientConnectionManager:225 - Connection can be kept alive indefinitely

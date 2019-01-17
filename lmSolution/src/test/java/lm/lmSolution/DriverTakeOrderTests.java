@@ -2,24 +2,16 @@ package lm.lmSolution;
 
 import org.testng.annotations.Test;
 
-import lm.lmSolution.ApiCallHandler;
 import lm.lmSolution.HelperMethods;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.DataProvider;
-import org.testng.annotations.BeforeClass;
-
-import java.io.IOException;
 import java.lang.reflect.Method;
 
 import org.apache.http.ParseException;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.AfterTest;
 
 public class DriverTakeOrderTests {
 
@@ -93,7 +85,7 @@ public class DriverTakeOrderTests {
 	 */
 	@Test()
 	public void TestCase_Take_Order_VerifyStatusCode_InvalidFlow() {
-		JSONObject inputJSon, outputJSon = null;
+		JSONObject inputJSon;
 		int id = 0, statusCodeExpected = 422, actualStatus;
 		try {
 			// Create test data
@@ -105,8 +97,7 @@ public class DriverTakeOrderTests {
 			// Cancel order
 			HelperMethods.cancelOrder(id);
 			
-			// Take order
-			outputJSon = HelperMethods.takeOrder(id);
+			HelperMethods.takeOrder(id);
 			actualStatus = HelperMethods.getStatusCode();
 			System.out.println("InValid Status Code for Incorrect flow of Take Order" + actualStatus);
 

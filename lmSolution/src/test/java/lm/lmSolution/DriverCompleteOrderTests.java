@@ -6,17 +6,12 @@ import lm.lmSolution.HelperMethods;
 
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
-
 import java.lang.reflect.Method;
 
 import org.apache.http.ParseException;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.AfterTest;
 
 public class DriverCompleteOrderTests {
 

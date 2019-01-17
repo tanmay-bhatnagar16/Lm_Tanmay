@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="22" passed="22">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="6336" started-at="2019-01-17T06:08:31Z" finished-at="2019-01-17T06:08:37Z">
+  <suite name="TmpSuite" duration-ms="7793" started-at="2019-01-17T12:48:56Z" finished-at="2019-01-17T12:49:04Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="6336" started-at="2019-01-17T06:08:31Z" finished-at="2019-01-17T06:08:37Z">
+    <test name="TmpTest" duration-ms="7793" started-at="2019-01-17T12:48:56Z" finished-at="2019-01-17T12:49:04Z">
       <class name="lm.lmSolution.FetchOrderTests">
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.FetchOrderTests@5ae9a829]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-01-17T11:38:34Z" finished-at="2019-01-17T11:38:34Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.FetchOrderTests@2e5c649]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-01-17T18:19:01Z" finished-at="2019-01-17T18:19:01Z">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TestCase_Fetch_Order_VerifyStatusCode_InvalidID()[pri:0, instance:lm.lmSolution.FetchOrderTests@5ae9a829]" name="TestCase_Fetch_Order_VerifyStatusCode_InvalidID" duration-ms="260" started-at="2019-01-17T11:38:34Z" finished-at="2019-01-17T11:38:34Z">
+        <test-method status="PASS" signature="TestCase_Fetch_Order_VerifyStatusCode_InvalidID()[pri:0, instance:lm.lmSolution.FetchOrderTests@2e5c649]" name="TestCase_Fetch_Order_VerifyStatusCode_InvalidID" duration-ms="222" started-at="2019-01-17T18:19:01Z" finished-at="2019-01-17T18:19:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase_Fetch_Order_VerifyStatusCode_InvalidID -->
-        <test-method status="PASS" signature="TestCase_Fetch_Order_VerifyStatusCode_ValidID()[pri:0, instance:lm.lmSolution.FetchOrderTests@5ae9a829]" name="TestCase_Fetch_Order_VerifyStatusCode_ValidID" duration-ms="221" started-at="2019-01-17T11:38:34Z" finished-at="2019-01-17T11:38:35Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.FetchOrderTests@2e5c649]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:02Z" finished-at="2019-01-17T18:19:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase_Fetch_Order_VerifyStatusCode_InvalidID status=SUCCESS method=FetchOrderTests.TestCase_Fetch_Order_VerifyStatusCode_InvalidID()[pri:0, instance:lm.lmSolution.FetchOrderTests@2e5c649] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestCase_Fetch_Order_VerifyStatusCode_ValidID -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.FetchOrderTests@5ae9a829]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:34Z" finished-at="2019-01-17T11:38:34Z">
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.FetchOrderTests@2e5c649]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:02Z" finished-at="2019-01-17T18:19:02Z">
           <params>
             <param index="0">
               <value>
@@ -37,22 +44,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.FetchOrderTests@5ae9a829]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:34Z" finished-at="2019-01-17T11:38:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TestCase_Fetch_Order_VerifyStatusCode_InvalidID status=SUCCESS method=FetchOrderTests.TestCase_Fetch_Order_VerifyStatusCode_InvalidID()[pri:0, instance:lm.lmSolution.FetchOrderTests@5ae9a829] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        <test-method status="PASS" signature="TestCase_Fetch_Order_VerifyStatusCode_ValidID()[pri:0, instance:lm.lmSolution.FetchOrderTests@2e5c649]" name="TestCase_Fetch_Order_VerifyStatusCode_ValidID" duration-ms="219" started-at="2019-01-17T18:19:02Z" finished-at="2019-01-17T18:19:02Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.FetchOrderTests@5ae9a829]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:35Z" finished-at="2019-01-17T11:38:35Z">
+        </test-method> <!-- TestCase_Fetch_Order_VerifyStatusCode_ValidID -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.FetchOrderTests@2e5c649]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-01-17T18:19:02Z" finished-at="2019-01-17T18:19:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestCase_Fetch_Order_VerifyStatusCode_ValidID status=SUCCESS method=FetchOrderTests.TestCase_Fetch_Order_VerifyStatusCode_ValidID()[pri:0, instance:lm.lmSolution.FetchOrderTests@5ae9a829] output={null}]]]>
+                <![CDATA[[TestResult name=TestCase_Fetch_Order_VerifyStatusCode_ValidID status=SUCCESS method=FetchOrderTests.TestCase_Fetch_Order_VerifyStatusCode_ValidID()[pri:0, instance:lm.lmSolution.FetchOrderTests@2e5c649] output={null}]]]>
               </value>
             </param>
           </params>
@@ -61,11 +61,48 @@
         </test-method> <!-- afterMethod -->
       </class> <!-- lm.lmSolution.FetchOrderTests -->
       <class name="lm.lmSolution.DriverCompleteOrderTests">
-        <test-method status="PASS" signature="TestCase_Complete_Order_VerifyStatusCode_ValidID()[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@2344fc66]" name="TestCase_Complete_Order_VerifyStatusCode_ValidID" duration-ms="206" started-at="2019-01-17T11:38:35Z" finished-at="2019-01-17T11:38:36Z">
+        <test-method status="PASS" signature="TestCase_Complete_Order_VerifyStatusCode_InvalidFlow()[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@136432db]" name="TestCase_Complete_Order_VerifyStatusCode_InvalidFlow" duration-ms="242" started-at="2019-01-17T18:19:02Z" finished-at="2019-01-17T18:19:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestCase_Complete_Order_VerifyStatusCode_ValidID -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@2344fc66]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:35Z" finished-at="2019-01-17T11:38:35Z">
+        </test-method> <!-- TestCase_Complete_Order_VerifyStatusCode_InvalidFlow -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@136432db]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:02Z" finished-at="2019-01-17T18:19:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void lm.lmSolution.DriverCompleteOrderTests.TestCase_Complete_Order_VerifyStatusCode_InvalidFlow()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="TestCase_Complete_Order_VerifyStatusCode_InvalidID()[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@136432db]" name="TestCase_Complete_Order_VerifyStatusCode_InvalidID" duration-ms="261" started-at="2019-01-17T18:19:03Z" finished-at="2019-01-17T18:19:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase_Complete_Order_VerifyStatusCode_InvalidID -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@136432db]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:03Z" finished-at="2019-01-17T18:19:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase_Complete_Order_VerifyStatusCode_InvalidFlow status=SUCCESS method=DriverCompleteOrderTests.TestCase_Complete_Order_VerifyStatusCode_InvalidFlow()[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@136432db] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@136432db]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:03Z" finished-at="2019-01-17T18:19:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void lm.lmSolution.DriverCompleteOrderTests.TestCase_Complete_Order_VerifyStatusCode_InvalidID()]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@136432db]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-01-17T18:19:03Z" finished-at="2019-01-17T18:19:03Z">
           <params>
             <param index="0">
               <value>
@@ -76,63 +113,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@2344fc66]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-01-17T11:38:36Z" finished-at="2019-01-17T11:38:36Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@136432db]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:03Z" finished-at="2019-01-17T18:19:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestCase_Complete_Order_VerifyStatusCode_ValidID status=SUCCESS method=DriverCompleteOrderTests.TestCase_Complete_Order_VerifyStatusCode_ValidID()[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@2344fc66] output={null}]]]>
+                <![CDATA[[TestResult name=TestCase_Complete_Order_VerifyStatusCode_InvalidID status=SUCCESS method=DriverCompleteOrderTests.TestCase_Complete_Order_VerifyStatusCode_InvalidID()[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@136432db] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="TestCase_VerifyStatusCode_InvalidFlow()[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@2344fc66]" name="TestCase_VerifyStatusCode_InvalidFlow" duration-ms="208" started-at="2019-01-17T11:38:36Z" finished-at="2019-01-17T11:38:36Z">
+        <test-method status="PASS" signature="TestCase_Complete_Order_VerifyStatusCode_ValidID()[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@136432db]" name="TestCase_Complete_Order_VerifyStatusCode_ValidID" duration-ms="239" started-at="2019-01-17T18:19:03Z" finished-at="2019-01-17T18:19:03Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestCase_VerifyStatusCode_InvalidFlow -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@2344fc66]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:36Z" finished-at="2019-01-17T11:38:36Z">
+        </test-method> <!-- TestCase_Complete_Order_VerifyStatusCode_ValidID -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@136432db]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:03Z" finished-at="2019-01-17T18:19:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void lm.lmSolution.DriverCompleteOrderTests.TestCase_VerifyStatusCode_InvalidFlow()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@2344fc66]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:36Z" finished-at="2019-01-17T11:38:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TestCase_VerifyStatusCode_InvalidFlow status=SUCCESS method=DriverCompleteOrderTests.TestCase_VerifyStatusCode_InvalidFlow()[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@2344fc66] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@2344fc66]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:36Z" finished-at="2019-01-17T11:38:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[public void lm.lmSolution.DriverCompleteOrderTests.TestCase_VerifyStatusCode_InvalidID()]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TestCase_VerifyStatusCode_InvalidID()[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@2344fc66]" name="TestCase_VerifyStatusCode_InvalidID" duration-ms="218" started-at="2019-01-17T11:38:36Z" finished-at="2019-01-17T11:38:36Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase_VerifyStatusCode_InvalidID -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@2344fc66]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:36Z" finished-at="2019-01-17T11:38:36Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TestCase_VerifyStatusCode_InvalidID status=SUCCESS method=DriverCompleteOrderTests.TestCase_VerifyStatusCode_InvalidID()[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@2344fc66] output={null}]]]>
+                <![CDATA[[TestResult name=TestCase_Complete_Order_VerifyStatusCode_ValidID status=SUCCESS method=DriverCompleteOrderTests.TestCase_Complete_Order_VerifyStatusCode_ValidID()[pri:0, instance:lm.lmSolution.DriverCompleteOrderTests@136432db] output={null}]]]>
               </value>
             </param>
           </params>
@@ -141,7 +141,7 @@
         </test-method> <!-- afterMethod -->
       </class> <!-- lm.lmSolution.DriverCompleteOrderTests -->
       <class name="lm.lmSolution.PlaceOrderTests">
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="beforeMethod" is-config="true" duration-ms="6" started-at="2019-01-17T11:38:31Z" finished-at="2019-01-17T11:38:31Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="beforeMethod" is-config="true" duration-ms="5" started-at="2019-01-17T18:18:56Z" finished-at="2019-01-17T18:18:56Z">
           <params>
             <param index="0">
               <value>
@@ -152,26 +152,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="Testcase_placeAdvanceOrder_VerifyId()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="Testcase_placeAdvanceOrder_VerifyId" duration-ms="1288" started-at="2019-01-17T11:38:31Z" finished-at="2019-01-17T11:38:32Z">
+        <test-method status="PASS" signature="Testcase_placeAdvanceOrder_VerifyId()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="Testcase_placeAdvanceOrder_VerifyId" duration-ms="3315" started-at="2019-01-17T18:18:56Z" finished-at="2019-01-17T18:19:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Testcase_placeAdvanceOrder_VerifyId -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:32Z" finished-at="2019-01-17T11:38:32Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-01-17T18:19:00Z" finished-at="2019-01-17T18:19:00Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Testcase_placeAdvanceOrder_VerifyId status=SUCCESS method=PlaceOrderTests.Testcase_placeAdvanceOrder_VerifyId()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1] output={null}]]]>
+                <![CDATA[[TestResult name=Testcase_placeAdvanceOrder_VerifyId status=SUCCESS method=PlaceOrderTests.Testcase_placeAdvanceOrder_VerifyId()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="Testcase_placeAdvanceOrder_verifyDistancesCount()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="Testcase_placeAdvanceOrder_verifyDistancesCount" duration-ms="220" started-at="2019-01-17T11:38:32Z" finished-at="2019-01-17T11:38:32Z">
+        <test-method status="PASS" signature="Testcase_placeAdvanceOrder_verifyDistancesCount()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="Testcase_placeAdvanceOrder_verifyDistancesCount" duration-ms="204" started-at="2019-01-17T18:19:00Z" finished-at="2019-01-17T18:19:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Testcase_placeAdvanceOrder_verifyDistancesCount -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:32Z" finished-at="2019-01-17T11:38:32Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:00Z" finished-at="2019-01-17T18:19:00Z">
           <params>
             <param index="0">
               <value>
@@ -182,18 +182,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:32Z" finished-at="2019-01-17T11:38:32Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-01-17T18:19:00Z" finished-at="2019-01-17T18:19:00Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Testcase_placeAdvanceOrder_verifyDistancesCount status=SUCCESS method=PlaceOrderTests.Testcase_placeAdvanceOrder_verifyDistancesCount()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1] output={null}]]]>
+                <![CDATA[[TestResult name=Testcase_placeAdvanceOrder_verifyDistancesCount status=SUCCESS method=PlaceOrderTests.Testcase_placeAdvanceOrder_verifyDistancesCount()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:32Z" finished-at="2019-01-17T11:38:32Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:00Z" finished-at="2019-01-17T18:19:00Z">
           <params>
             <param index="0">
               <value>
@@ -204,26 +204,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="Testcase_placeAdvanceOrder_verifyFareAboveTwoKms()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="Testcase_placeAdvanceOrder_verifyFareAboveTwoKms" duration-ms="234" started-at="2019-01-17T11:38:32Z" finished-at="2019-01-17T11:38:33Z">
+        <test-method status="PASS" signature="Testcase_placeAdvanceOrder_verifyFareAboveTwoKms()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="Testcase_placeAdvanceOrder_verifyFareAboveTwoKms" duration-ms="176" started-at="2019-01-17T18:19:00Z" finished-at="2019-01-17T18:19:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Testcase_placeAdvanceOrder_verifyFareAboveTwoKms -->
-        <test-method status="PASS" signature="Testcase_placeAdvanceOrder_verifyFareAboveTwoKms_NightCharges()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="Testcase_placeAdvanceOrder_verifyFareAboveTwoKms_NightCharges" duration-ms="238" started-at="2019-01-17T11:38:33Z" finished-at="2019-01-17T11:38:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Testcase_placeAdvanceOrder_verifyFareAboveTwoKms_NightCharges -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:33Z" finished-at="2019-01-17T11:38:33Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-01-17T18:19:00Z" finished-at="2019-01-17T18:19:00Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Testcase_placeAdvanceOrder_verifyFareAboveTwoKms status=SUCCESS method=PlaceOrderTests.Testcase_placeAdvanceOrder_verifyFareAboveTwoKms()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1] output={null}]]]>
+                <![CDATA[[TestResult name=Testcase_placeAdvanceOrder_verifyFareAboveTwoKms status=SUCCESS method=PlaceOrderTests.Testcase_placeAdvanceOrder_verifyFareAboveTwoKms()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:33Z" finished-at="2019-01-17T11:38:33Z">
+        <test-method status="PASS" signature="Testcase_placeAdvanceOrder_verifyFareAboveTwoKms_NightCharges()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="Testcase_placeAdvanceOrder_verifyFareAboveTwoKms_NightCharges" duration-ms="177" started-at="2019-01-17T18:19:00Z" finished-at="2019-01-17T18:19:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Testcase_placeAdvanceOrder_verifyFareAboveTwoKms_NightCharges -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:00Z" finished-at="2019-01-17T18:19:00Z">
           <params>
             <param index="0">
               <value>
@@ -234,18 +234,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:33Z" finished-at="2019-01-17T11:38:33Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:00Z" finished-at="2019-01-17T18:19:00Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Testcase_placeAdvanceOrder_verifyFareAboveTwoKms_NightCharges status=SUCCESS method=PlaceOrderTests.Testcase_placeAdvanceOrder_verifyFareAboveTwoKms_NightCharges()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1] output={null}]]]>
+                <![CDATA[[TestResult name=Testcase_placeAdvanceOrder_verifyFareAboveTwoKms_NightCharges status=SUCCESS method=PlaceOrderTests.Testcase_placeAdvanceOrder_verifyFareAboveTwoKms_NightCharges()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-01-17T11:38:33Z" finished-at="2019-01-17T11:38:33Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-01-17T18:19:00Z" finished-at="2019-01-17T18:19:00Z">
           <params>
             <param index="0">
               <value>
@@ -256,11 +256,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="Testcase_placeAdvanceOrder_verifyFareBelowTwoKms()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="Testcase_placeAdvanceOrder_verifyFareBelowTwoKms" duration-ms="167" started-at="2019-01-17T11:38:33Z" finished-at="2019-01-17T11:38:33Z">
+        <test-method status="PASS" signature="Testcase_placeAdvanceOrder_verifyFareBelowTwoKms()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="Testcase_placeAdvanceOrder_verifyFareBelowTwoKms" duration-ms="178" started-at="2019-01-17T18:19:00Z" finished-at="2019-01-17T18:19:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Testcase_placeAdvanceOrder_verifyFareBelowTwoKms -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:33Z" finished-at="2019-01-17T11:38:33Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-01-17T18:19:00Z" finished-at="2019-01-17T18:19:00Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Testcase_placeAdvanceOrder_verifyFareBelowTwoKms status=SUCCESS method=PlaceOrderTests.Testcase_placeAdvanceOrder_verifyFareBelowTwoKms()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:00Z" finished-at="2019-01-17T18:19:00Z">
           <params>
             <param index="0">
               <value>
@@ -271,22 +282,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:33Z" finished-at="2019-01-17T11:38:33Z">
+        <test-method status="PASS" signature="Testcase_placeAdvanceOrder_verifyFareBelowTwoKms_NightCharges()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="Testcase_placeAdvanceOrder_verifyFareBelowTwoKms_NightCharges" duration-ms="167" started-at="2019-01-17T18:19:00Z" finished-at="2019-01-17T18:19:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Testcase_placeAdvanceOrder_verifyFareBelowTwoKms_NightCharges -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:01Z" finished-at="2019-01-17T18:19:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Testcase_placeAdvanceOrder_verifyFareBelowTwoKms status=SUCCESS method=PlaceOrderTests.Testcase_placeAdvanceOrder_verifyFareBelowTwoKms()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1] output={null}]]]>
+                <![CDATA[[TestResult name=Testcase_placeAdvanceOrder_verifyFareBelowTwoKms_NightCharges status=SUCCESS method=PlaceOrderTests.Testcase_placeAdvanceOrder_verifyFareBelowTwoKms_NightCharges()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="Testcase_placeAdvanceOrder_verifyFareBelowTwoKms_NightCharges()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="Testcase_placeAdvanceOrder_verifyFareBelowTwoKms_NightCharges" duration-ms="253" started-at="2019-01-17T11:38:33Z" finished-at="2019-01-17T11:38:33Z">
+        <test-method status="PASS" signature="Testcase_placeOrder_verifyDistancesCount()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="Testcase_placeOrder_verifyDistancesCount" duration-ms="205" started-at="2019-01-17T18:19:01Z" finished-at="2019-01-17T18:19:01Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Testcase_placeAdvanceOrder_verifyFareBelowTwoKms_NightCharges -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:33Z" finished-at="2019-01-17T11:38:33Z">
+        </test-method> <!-- Testcase_placeOrder_verifyDistancesCount -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:01Z" finished-at="2019-01-17T18:19:01Z">
           <params>
             <param index="0">
               <value>
@@ -297,22 +312,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:33Z" finished-at="2019-01-17T11:38:33Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-01-17T18:19:01Z" finished-at="2019-01-17T18:19:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Testcase_placeAdvanceOrder_verifyFareBelowTwoKms_NightCharges status=SUCCESS method=PlaceOrderTests.Testcase_placeAdvanceOrder_verifyFareBelowTwoKms_NightCharges()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1] output={null}]]]>
+                <![CDATA[[TestResult name=Testcase_placeOrder_verifyDistancesCount status=SUCCESS method=PlaceOrderTests.Testcase_placeOrder_verifyDistancesCount()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="Testcase_placeOrder_verifyDistancesCount()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="Testcase_placeOrder_verifyDistancesCount" duration-ms="231" started-at="2019-01-17T11:38:33Z" finished-at="2019-01-17T11:38:33Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Testcase_placeOrder_verifyDistancesCount -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:33Z" finished-at="2019-01-17T11:38:33Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:01Z" finished-at="2019-01-17T18:19:01Z">
           <params>
             <param index="0">
               <value>
@@ -323,33 +334,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:33Z" finished-at="2019-01-17T11:38:33Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Testcase_placeOrder_verifyDistancesCount status=SUCCESS method=PlaceOrderTests.Testcase_placeOrder_verifyDistancesCount()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="Testcase_placeOrder_verifyFareAboveTwoKms()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="Testcase_placeOrder_verifyFareAboveTwoKms" duration-ms="232" started-at="2019-01-17T11:38:33Z" finished-at="2019-01-17T11:38:34Z">
+        <test-method status="PASS" signature="Testcase_placeOrder_verifyFareAboveTwoKms()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="Testcase_placeOrder_verifyFareAboveTwoKms" duration-ms="178" started-at="2019-01-17T18:19:01Z" finished-at="2019-01-17T18:19:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Testcase_placeOrder_verifyFareAboveTwoKms -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:34Z" finished-at="2019-01-17T11:38:34Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-01-17T18:19:01Z" finished-at="2019-01-17T18:19:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Testcase_placeOrder_verifyFareAboveTwoKms status=SUCCESS method=PlaceOrderTests.Testcase_placeOrder_verifyFareAboveTwoKms()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1] output={null}]]]>
+                <![CDATA[[TestResult name=Testcase_placeOrder_verifyFareAboveTwoKms status=SUCCESS method=PlaceOrderTests.Testcase_placeOrder_verifyFareAboveTwoKms()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:34Z" finished-at="2019-01-17T11:38:34Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:01Z" finished-at="2019-01-17T18:19:01Z">
           <params>
             <param index="0">
               <value>
@@ -360,26 +360,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="Testcase_placeOrder_verifyFareBelowTwoKms()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="Testcase_placeOrder_verifyFareBelowTwoKms" duration-ms="232" started-at="2019-01-17T11:38:34Z" finished-at="2019-01-17T11:38:34Z">
+        <test-method status="PASS" signature="Testcase_placeOrder_verifyFareBelowTwoKms()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="Testcase_placeOrder_verifyFareBelowTwoKms" duration-ms="163" started-at="2019-01-17T18:19:01Z" finished-at="2019-01-17T18:19:01Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Testcase_placeOrder_verifyFareBelowTwoKms -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-01-17T11:38:34Z" finished-at="2019-01-17T11:38:34Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=Testcase_placeOrder_verifyFareBelowTwoKms status=SUCCESS method=PlaceOrderTests.Testcase_placeOrder_verifyFareBelowTwoKms()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="Testcase_placeOrder_verifyID()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="Testcase_placeOrder_verifyID" duration-ms="238" started-at="2019-01-17T11:38:34Z" finished-at="2019-01-17T11:38:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Testcase_placeOrder_verifyID -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:34Z" finished-at="2019-01-17T11:38:34Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:01Z" finished-at="2019-01-17T18:19:01Z">
           <params>
             <param index="0">
               <value>
@@ -390,11 +375,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:34Z" finished-at="2019-01-17T11:38:34Z">
+        <test-method status="PASS" signature="Testcase_placeOrder_verifyID()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="Testcase_placeOrder_verifyID" duration-ms="204" started-at="2019-01-17T18:19:01Z" finished-at="2019-01-17T18:19:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Testcase_placeOrder_verifyID -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:01Z" finished-at="2019-01-17T18:19:01Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=Testcase_placeOrder_verifyID status=SUCCESS method=PlaceOrderTests.Testcase_placeOrder_verifyID()[pri:0, instance:lm.lmSolution.PlaceOrderTests@573f2bb1] output={null}]]]>
+                <![CDATA[[TestResult name=Testcase_placeOrder_verifyFareBelowTwoKms status=SUCCESS method=PlaceOrderTests.Testcase_placeOrder_verifyFareBelowTwoKms()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:01Z" finished-at="2019-01-17T18:19:01Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=Testcase_placeOrder_verifyID status=SUCCESS method=PlaceOrderTests.Testcase_placeOrder_verifyID()[pri:0, instance:lm.lmSolution.PlaceOrderTests@12bb4df8] output={null}]]]>
               </value>
             </param>
           </params>
@@ -403,11 +403,7 @@
         </test-method> <!-- afterMethod -->
       </class> <!-- lm.lmSolution.PlaceOrderTests -->
       <class name="lm.lmSolution.DriverTakeOrderTests">
-        <test-method status="PASS" signature="TestCase_Take_Order_VerifyStatusCode_InvalidFlow()[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@548b7f67]" name="TestCase_Take_Order_VerifyStatusCode_InvalidFlow" duration-ms="239" started-at="2019-01-17T11:38:35Z" finished-at="2019-01-17T11:38:35Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase_Take_Order_VerifyStatusCode_InvalidFlow -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@548b7f67]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:35Z" finished-at="2019-01-17T11:38:35Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@1055e4af]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:02Z" finished-at="2019-01-17T18:19:02Z">
           <params>
             <param index="0">
               <value>
@@ -418,18 +414,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@548b7f67]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-01-17T11:38:35Z" finished-at="2019-01-17T11:38:35Z">
+        <test-method status="PASS" signature="TestCase_Take_Order_VerifyStatusCode_InvalidFlow()[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@1055e4af]" name="TestCase_Take_Order_VerifyStatusCode_InvalidFlow" duration-ms="240" started-at="2019-01-17T18:19:02Z" finished-at="2019-01-17T18:19:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase_Take_Order_VerifyStatusCode_InvalidFlow -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@1055e4af]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:02Z" finished-at="2019-01-17T18:19:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestCase_Take_Order_VerifyStatusCode_InvalidFlow status=SUCCESS method=DriverTakeOrderTests.TestCase_Take_Order_VerifyStatusCode_InvalidFlow()[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@548b7f67] output={null}]]]>
+                <![CDATA[[TestResult name=TestCase_Take_Order_VerifyStatusCode_InvalidFlow status=SUCCESS method=DriverTakeOrderTests.TestCase_Take_Order_VerifyStatusCode_InvalidFlow()[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@1055e4af] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@548b7f67]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:35Z" finished-at="2019-01-17T11:38:35Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@1055e4af]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-01-17T18:19:02Z" finished-at="2019-01-17T18:19:02Z">
           <params>
             <param index="0">
               <value>
@@ -440,15 +440,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TestCase_Take_Order_VerifyStatusCode_InvalidID()[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@548b7f67]" name="TestCase_Take_Order_VerifyStatusCode_InvalidID" duration-ms="289" started-at="2019-01-17T11:38:35Z" finished-at="2019-01-17T11:38:35Z">
+        <test-method status="PASS" signature="TestCase_Take_Order_VerifyStatusCode_InvalidID()[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@1055e4af]" name="TestCase_Take_Order_VerifyStatusCode_InvalidID" duration-ms="213" started-at="2019-01-17T18:19:02Z" finished-at="2019-01-17T18:19:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase_Take_Order_VerifyStatusCode_InvalidID -->
-        <test-method status="PASS" signature="TestCase_Take_Order_VerifyStatusCode_ValidID()[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@548b7f67]" name="TestCase_Take_Order_VerifyStatusCode_ValidID" duration-ms="244" started-at="2019-01-17T11:38:35Z" finished-at="2019-01-17T11:38:35Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@1055e4af]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:02Z" finished-at="2019-01-17T18:19:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase_Take_Order_VerifyStatusCode_InvalidID status=SUCCESS method=DriverTakeOrderTests.TestCase_Take_Order_VerifyStatusCode_InvalidID()[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@1055e4af] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="TestCase_Take_Order_VerifyStatusCode_ValidID()[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@1055e4af]" name="TestCase_Take_Order_VerifyStatusCode_ValidID" duration-ms="226" started-at="2019-01-17T18:19:02Z" finished-at="2019-01-17T18:19:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase_Take_Order_VerifyStatusCode_ValidID -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@548b7f67]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:35Z" finished-at="2019-01-17T11:38:35Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@1055e4af]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:02Z" finished-at="2019-01-17T18:19:02Z">
           <params>
             <param index="0">
               <value>
@@ -459,22 +470,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@548b7f67]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:35Z" finished-at="2019-01-17T11:38:35Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@1055e4af]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:02Z" finished-at="2019-01-17T18:19:02Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestCase_Take_Order_VerifyStatusCode_InvalidID status=SUCCESS method=DriverTakeOrderTests.TestCase_Take_Order_VerifyStatusCode_InvalidID()[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@548b7f67] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@548b7f67]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:35Z" finished-at="2019-01-17T11:38:35Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TestCase_Take_Order_VerifyStatusCode_ValidID status=SUCCESS method=DriverTakeOrderTests.TestCase_Take_Order_VerifyStatusCode_ValidID()[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@548b7f67] output={null}]]]>
+                <![CDATA[[TestResult name=TestCase_Take_Order_VerifyStatusCode_ValidID status=SUCCESS method=DriverTakeOrderTests.TestCase_Take_Order_VerifyStatusCode_ValidID()[pri:0, instance:lm.lmSolution.DriverTakeOrderTests@1055e4af] output={null}]]]>
               </value>
             </param>
           </params>
@@ -483,7 +483,7 @@
         </test-method> <!-- afterMethod -->
       </class> <!-- lm.lmSolution.DriverTakeOrderTests -->
       <class name="lm.lmSolution.CancelOrderTests">
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.CancelOrderTests@6d8a00e3]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:36Z" finished-at="2019-01-17T11:38:36Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.CancelOrderTests@7382f612]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-01-17T18:19:03Z" finished-at="2019-01-17T18:19:03Z">
           <params>
             <param index="0">
               <value>
@@ -494,26 +494,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="TestCase_Cancel_Order_VerifyStatusCode_InvalidID()[pri:0, instance:lm.lmSolution.CancelOrderTests@6d8a00e3]" name="TestCase_Cancel_Order_VerifyStatusCode_InvalidID" duration-ms="312" started-at="2019-01-17T11:38:36Z" finished-at="2019-01-17T11:38:36Z">
+        <test-method status="PASS" signature="TestCase_Cancel_Order_VerifyStatusCode_InvalidID()[pri:0, instance:lm.lmSolution.CancelOrderTests@7382f612]" name="TestCase_Cancel_Order_VerifyStatusCode_InvalidID" duration-ms="216" started-at="2019-01-17T18:19:03Z" finished-at="2019-01-17T18:19:03Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TestCase_Cancel_Order_VerifyStatusCode_InvalidID -->
-        <test-method status="PASS" signature="TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterPlaceOrder()[pri:0, instance:lm.lmSolution.CancelOrderTests@6d8a00e3]" name="TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterPlaceOrder" duration-ms="248" started-at="2019-01-17T11:38:36Z" finished-at="2019-01-17T11:38:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterPlaceOrder -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.CancelOrderTests@6d8a00e3]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:36Z" finished-at="2019-01-17T11:38:36Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.CancelOrderTests@7382f612]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:03Z" finished-at="2019-01-17T18:19:03Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestCase_Cancel_Order_VerifyStatusCode_InvalidID status=SUCCESS method=CancelOrderTests.TestCase_Cancel_Order_VerifyStatusCode_InvalidID()[pri:0, instance:lm.lmSolution.CancelOrderTests@6d8a00e3] output={null}]]]>
+                <![CDATA[[TestResult name=TestCase_Cancel_Order_VerifyStatusCode_InvalidID status=SUCCESS method=CancelOrderTests.TestCase_Cancel_Order_VerifyStatusCode_InvalidID()[pri:0, instance:lm.lmSolution.CancelOrderTests@7382f612] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.CancelOrderTests@6d8a00e3]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:36Z" finished-at="2019-01-17T11:38:36Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.CancelOrderTests@7382f612]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-01-17T18:19:03Z" finished-at="2019-01-17T18:19:03Z">
           <params>
             <param index="0">
               <value>
@@ -524,7 +520,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.CancelOrderTests@6d8a00e3]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-01-17T11:38:37Z" finished-at="2019-01-17T11:38:37Z">
+        <test-method status="PASS" signature="TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterPlaceOrder()[pri:0, instance:lm.lmSolution.CancelOrderTests@7382f612]" name="TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterPlaceOrder" duration-ms="215" started-at="2019-01-17T18:19:03Z" finished-at="2019-01-17T18:19:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterPlaceOrder -->
+        <test-method status="PASS" signature="TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterTakeOrder()[pri:0, instance:lm.lmSolution.CancelOrderTests@7382f612]" name="TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterTakeOrder" duration-ms="246" started-at="2019-01-17T18:19:04Z" finished-at="2019-01-17T18:19:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterTakeOrder -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.CancelOrderTests@7382f612]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:04Z" finished-at="2019-01-17T18:19:04Z">
           <params>
             <param index="0">
               <value>
@@ -535,22 +539,33 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.CancelOrderTests@6d8a00e3]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:37Z" finished-at="2019-01-17T11:38:37Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.CancelOrderTests@7382f612]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:04Z" finished-at="2019-01-17T18:19:04Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterPlaceOrder status=SUCCESS method=CancelOrderTests.TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterPlaceOrder()[pri:0, instance:lm.lmSolution.CancelOrderTests@6d8a00e3] output={null}]]]>
+                <![CDATA[[TestResult name=TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterPlaceOrder status=SUCCESS method=CancelOrderTests.TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterPlaceOrder()[pri:0, instance:lm.lmSolution.CancelOrderTests@7382f612] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterTakeOrder()[pri:0, instance:lm.lmSolution.CancelOrderTests@6d8a00e3]" name="TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterTakeOrder" duration-ms="248" started-at="2019-01-17T11:38:37Z" finished-at="2019-01-17T11:38:37Z">
+        <test-method status="PASS" signature="TestCase_cancel_Order_VerifyStatusCode_InvalidFlow()[pri:0, instance:lm.lmSolution.CancelOrderTests@7382f612]" name="TestCase_cancel_Order_VerifyStatusCode_InvalidFlow" duration-ms="256" started-at="2019-01-17T18:19:04Z" finished-at="2019-01-17T18:19:04Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterTakeOrder -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.CancelOrderTests@6d8a00e3]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-01-17T11:38:37Z" finished-at="2019-01-17T11:38:37Z">
+        </test-method> <!-- TestCase_cancel_Order_VerifyStatusCode_InvalidFlow -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.CancelOrderTests@7382f612]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:04Z" finished-at="2019-01-17T18:19:04Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterTakeOrder status=SUCCESS method=CancelOrderTests.TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterTakeOrder()[pri:0, instance:lm.lmSolution.CancelOrderTests@7382f612] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:lm.lmSolution.CancelOrderTests@7382f612]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:04Z" finished-at="2019-01-17T18:19:04Z">
           <params>
             <param index="0">
               <value>
@@ -561,26 +576,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.CancelOrderTests@6d8a00e3]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T11:38:37Z" finished-at="2019-01-17T11:38:37Z">
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.CancelOrderTests@7382f612]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-17T18:19:04Z" finished-at="2019-01-17T18:19:04Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterTakeOrder status=SUCCESS method=CancelOrderTests.TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterTakeOrder()[pri:0, instance:lm.lmSolution.CancelOrderTests@6d8a00e3] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="TestCase_cancel_Order_VerifyStatusCode_InvalidFlow()[pri:0, instance:lm.lmSolution.CancelOrderTests@6d8a00e3]" name="TestCase_cancel_Order_VerifyStatusCode_InvalidFlow" duration-ms="263" started-at="2019-01-17T11:38:37Z" finished-at="2019-01-17T11:38:37Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- TestCase_cancel_Order_VerifyStatusCode_InvalidFlow -->
-        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:lm.lmSolution.CancelOrderTests@6d8a00e3]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-01-17T11:38:37Z" finished-at="2019-01-17T11:38:37Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=TestCase_cancel_Order_VerifyStatusCode_InvalidFlow status=SUCCESS method=CancelOrderTests.TestCase_cancel_Order_VerifyStatusCode_InvalidFlow()[pri:0, instance:lm.lmSolution.CancelOrderTests@6d8a00e3] output={null}]]]>
+                <![CDATA[[TestResult name=TestCase_cancel_Order_VerifyStatusCode_InvalidFlow status=SUCCESS method=CancelOrderTests.TestCase_cancel_Order_VerifyStatusCode_InvalidFlow()[pri:0, instance:lm.lmSolution.CancelOrderTests@7382f612] output={null}]]]>
               </value>
             </param>
           </params>
@@ -588,6 +588,6 @@
           </reporter-output>
         </test-method> <!-- afterMethod -->
       </class> <!-- lm.lmSolution.CancelOrderTests -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- TmpTest -->
+  </suite> <!-- TmpSuite -->
 </testng-results>

@@ -6,11 +6,7 @@ import lm.lmSolution.ApiCallHandler;
 import lm.lmSolution.HelperMethods;
 
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
-
 import java.lang.reflect.Method;
 
 import org.apache.http.ParseException;
@@ -18,9 +14,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeTest;
-import org.testng.annotations.AfterTest;
 
 public class PlaceOrderTests {
 
@@ -71,7 +64,7 @@ public class PlaceOrderTests {
 			//Place Order
 			HelperMethods.placeOrder(inputJSon);
 			// Fetch driving distance from response
-			array2 = ApiCallHandler.responseJSON.getJSONArray("drivingDistancesInMeters");
+			array2 = ApiCallHandler.getJSONObject().getJSONArray("drivingDistancesInMeters");
 			System.out.println("Length is : " + array2.length());
 			if (array2.length() != expectedCount) {
 				Assert.assertEquals(array2.length(), expectedCount, "Number of distances do not match ");
@@ -110,7 +103,7 @@ public class PlaceOrderTests {
 			HelperMethods.placeOrder(inputJSon);
 			
 			//fetch fare from response
-			outputJSon1 = ApiCallHandler.responseJSON.getJSONObject("fare");
+			outputJSon1 = ApiCallHandler.getJSONObject().getJSONObject("fare");
 			actualFare = outputJSon1.getFloat("amount");
 			System.out.println("Fare is : " + actualFare);
 
@@ -150,7 +143,7 @@ public class PlaceOrderTests {
 			HelperMethods.placeOrder(inputJSon);
 			
 			//fetch fare
-			outputJSon1 = ApiCallHandler.responseJSON.getJSONObject("fare");
+			outputJSon1 = ApiCallHandler.getJSONObject().getJSONObject("fare");
 			actualFare = outputJSon1.getFloat("amount");
 			System.out.println("Additional Fare is : " + actualFare);
 
@@ -207,7 +200,7 @@ public class PlaceOrderTests {
 			 HelperMethods.placeOrder(inputJSon);
 			 
 			 //Fetch distance
-			 JSONArray array2 = ApiCallHandler.responseJSON.getJSONArray("drivingDistancesInMeters");
+			 JSONArray array2 = ApiCallHandler.getJSONObject().getJSONArray("drivingDistancesInMeters");
 			System.out.println("Length for Advance order is : " + array2.length());
 			if (array2.length() != expectedCount) {
 				Assert.assertEquals(array2.length(), expectedCount, "Number of distances do not match ");
@@ -242,7 +235,7 @@ public class PlaceOrderTests {
 			HelperMethods.placeOrder(inputJSon);
 			
 			//Fetch fare
-			outputJSon1 = ApiCallHandler.responseJSON.getJSONObject("fare");
+			outputJSon1 = ApiCallHandler.getJSONObject().getJSONObject("fare");
 			actualFare = outputJSon1.getFloat("amount");
 			System.out.println("Fare for Advance booking is : " + actualFare);
 
@@ -282,7 +275,7 @@ public class PlaceOrderTests {
 			HelperMethods.placeOrder(inputJSon);
 			
 			//Fetch fare
-			outputJSon1 = ApiCallHandler.responseJSON.getJSONObject("fare");
+			outputJSon1 = ApiCallHandler.getJSONObject().getJSONObject("fare");
 			actualFare = outputJSon1.getFloat("amount");
 			System.out.println("Additional Fare for Advance booking is : " + actualFare);
 			if (actualFare != expectedFare) {
@@ -321,7 +314,7 @@ public class PlaceOrderTests {
 			HelperMethods.placeOrder(inputJSon);
 			
 			// fetch fare
-			outputJSon1 = ApiCallHandler.responseJSON.getJSONObject("fare");
+			outputJSon1 = ApiCallHandler.getJSONObject().getJSONObject("fare");
 			actualFare = outputJSon1.getFloat("amount");
 			System.out.println("Night Fare for Advance booking is : " + actualFare);
 			if (actualFare != expectedFare) {
@@ -359,7 +352,7 @@ public class PlaceOrderTests {
 			//Place Order
 			HelperMethods.placeOrder(inputJSon);
 			//Fetch fare
-			outputJSon1 = ApiCallHandler.responseJSON.getJSONObject("fare");
+			outputJSon1 = ApiCallHandler.getJSONObject().getJSONObject("fare");
 			actualFare = outputJSon1.getFloat("amount");
 			System.out.println("Additional  Night Fare for Advance booking is : " + actualFare);
 

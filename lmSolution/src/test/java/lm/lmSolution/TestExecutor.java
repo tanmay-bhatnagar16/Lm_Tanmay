@@ -6,9 +6,8 @@ package lm.lmSolution;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.testng.TestListenerAdapter;
 import org.testng.TestNG;
-import org.testng.collections.Lists;
+import org.testng.log4testng.Logger;
 import org.testng.xml.XmlClass;
 import org.testng.xml.XmlSuite;
 import org.testng.xml.XmlTest;
@@ -18,12 +17,16 @@ import org.testng.xml.XmlTest;
  *
  */
 public class TestExecutor {
+	private static Logger logger = Logger.getLogger(TestExecutor.class);
 
 	/**
 	 * description : Main method to execute the test cases from code
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		
+		try
+		{
 		
 		XmlSuite suite = new XmlSuite();
 		suite.setName("TmpSuite");
@@ -44,6 +47,11 @@ public class TestExecutor {
 		TestNG tng = new TestNG();
 		tng.setXmlSuites(suites);
 		tng.run();
+		}
+		catch(Exception e)
+		{
+			logger.error("Exception in main :" + e.getMessage());
+		}
 
 	
 	}
