@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="0" passed="0">
+  <reporter-output>
+  </reporter-output>
+  <suite name="lalamove.lalamoveSolution.TestExecutor" duration-ms="4" started-at="2019-01-17T04:55:24Z" finished-at="2019-01-17T04:55:24Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="4" started-at="2019-01-17T04:55:24Z" finished-at="2019-01-17T04:55:24Z">
+    </test> <!-- Command line test -->
+  </suite> <!-- lalamove.lalamoveSolution.TestExecutor -->
+</testng-results>
