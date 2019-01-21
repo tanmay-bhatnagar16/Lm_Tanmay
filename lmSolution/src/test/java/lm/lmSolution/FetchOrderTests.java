@@ -3,17 +3,27 @@ package lm.lmSolution;
 import org.testng.annotations.Test;
 
 import lm.lmSolution.HelperMethods;
-
+import org.apache.log4j.Logger;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import java.lang.reflect.Method;
 
-import org.apache.http.ParseException;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.testng.Assert;
-import org.testng.ITestResult;;
+import org.testng.ITestResult;
+import org.apache.http.HttpStatus;
+import org.apache.http.ParseException;
 
 public class FetchOrderTests {
+	private static Logger logger = Logger.getLogger("LOG");
+
+	private static String field_status = "status";
+	private static String field_message = "message";
+	private static String field_stops = "stops";
+	private static String field_distance = "drivingDistancesInMeters";
+	private static String field_fare = "fare";
+	private static String field_amount = "amount";
 
 	/**
 	 * description : Verifies fetch order functionality when valid order Id is
@@ -22,7 +32,7 @@ public class FetchOrderTests {
 	@Test()
 	public void TestCase_Fetch_Order_VerifyStatusCode_ValidID() {
 
-		JSONObject inputJSon, outputJSon = null;
+		JSONObject inputJSon;
 		int id = 0, statusCode = 0;
 		try {
 			// Create test data
@@ -30,20 +40,51 @@ public class FetchOrderTests {
 
 			// Place order
 			id = HelperMethods.placeOrder(inputJSon);
+			Assert.assertTrue(id != 0, "ID Not Generated ");
 
-			// Fetch order
-			outputJSon = HelperMethods.fetchOrder(id);
+			HelperMethods.fetchOrder(id);
 			// Get status code
-			statusCode = HelperMethods.getStatusCode();
-			System.out.println("Valid Status Code" + statusCode);
+			statusCode = ApiCallHandler.getstatusCode();
+			logger.info("Valid Status Code" + statusCode);
 
-			if (outputJSon == null || statusCode != 200) {
-				Assert.fail("Request Failed with status code : " + statusCode);
-			}
+			Assert.assertEquals(statusCode, HttpStatus.SC_OK, "Status do not match ");
 
-		} catch (ParseException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	/**
+	 * description : Verifies Order status in fetch order functionality for an order
+	 * just placed and when valid order Id is provided as input
+	 */
+	@Test()
+	public void TestCase_Fetch_Order_VerifyOrderStatusForPlacedOrder() {
+
+		JSONObject inputJSon;
+		int id = 0;
+		String actualStatus, expectedStatus;
+		try {
+			// Create test data
+			inputJSon = HelperMethods.getDefaultJSON(false);
+			expectedStatus = HelperMethods.getExcelData("TestData", "Status_Assigning");
+
+			// Place order
+			id = HelperMethods.placeOrder(inputJSon);
+			Assert.assertTrue(id != 0, "ID Not Generated ");
+
+			HelperMethods.fetchOrder(id);
+			// Get status code
+			actualStatus = ApiCallHandler.getResponseJson().getString(field_status);
+			logger.info("Valid Status " + actualStatus);
+
+			Assert.assertEquals(actualStatus, expectedStatus, "Status do not match ");
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			Assert.fail(e.getMessage());
 		}
 
 	}
@@ -55,45 +96,187 @@ public class FetchOrderTests {
 	@Test()
 	public void TestCase_Fetch_Order_VerifyStatusCode_InvalidID() {
 		JSONObject inputJSon;
-		int id = 0, statusCodeExpected = 404, actualStatus;
+		int id = 0, actualStatus;
 		try {
 			// Create test data
 			inputJSon = HelperMethods.getDefaultJSON(false);
-			
+
 			// Place order
 			id = HelperMethods.placeOrder(inputJSon);
-			
+			Assert.assertTrue(id != 0, "ID Not Generated ");
+
 			// fetch order with incorrect id
 			HelperMethods.fetchOrder((id + 1));
-			
-			// Get status code
-			actualStatus = HelperMethods.getStatusCode();
-			
-			System.out.println("InValid Status Code" + actualStatus);
 
-			if (actualStatus != statusCodeExpected) {
-				Assert.assertEquals(actualStatus, statusCodeExpected, "Status do not match ");
+			// Get status code
+			actualStatus = ApiCallHandler.getstatusCode();
+
+			logger.info("InValid Status Code" + actualStatus);
+			Assert.assertEquals(actualStatus, HttpStatus.SC_NOT_FOUND, "Status do not match ");
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	/**
+	 * description : Verifies Error Message for fetch order functionality when
+	 * invalid order Id is provided as input
+	 */
+	@Test()
+	public void TestCase_Fetch_Order_VerifyErrorMessage_InvalidID() {
+		JSONObject inputJSon;
+		int id = 0;
+		String actualStatus, expectedStatus;
+		try {
+			// Create test data
+			inputJSon = HelperMethods.getDefaultJSON(false);
+			expectedStatus = HelperMethods.getExcelData("ErrorMessages", "ErrorMessage_OrderNotFound");
+			// Place order
+			id = HelperMethods.placeOrder(inputJSon);
+			Assert.assertTrue(id != 0, "ID Not Generated ");
+
+			// fetch order with incorrect id
+			HelperMethods.fetchOrder((id + 1));
+
+			// Get status code
+			actualStatus = ApiCallHandler.getResponseJson().getString(field_message);
+
+			logger.info("Error Message" + actualStatus);
+			Assert.assertEquals(actualStatus, expectedStatus, "Error Message do not match ");
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	/**
+	 * description : Verifies JSON Fields "Stops" for fetch order functionality when
+	 * valid order Id is provided as input
+	 */
+	@Test()
+	public void TestCase_Fetch_Order_VerifyStopsCounts_ValidID() {
+
+		JSONObject inputJSon = new JSONObject();
+		int expectedCount, id = 0;
+		try {
+
+			JSONArray actualDistances = new JSONArray();
+			// Create test data
+			inputJSon = HelperMethods.getDefaultJSON(false);
+			expectedCount = inputJSon.getJSONArray(field_stops).length();
+
+			// Place Order
+			id = HelperMethods.placeOrder(inputJSon);
+			Assert.assertTrue(id != 0, "ID Not Generated ");
+
+			HelperMethods.fetchOrder(id);
+			// Fetch driving distance from response
+			actualDistances = ApiCallHandler.getResponseJson().getJSONArray(field_stops);
+			logger.info("Length is : " + actualDistances.length());
+
+			Assert.assertEquals(actualDistances.length(), expectedCount, "Number of Stops do not match ");
+
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+
+	/** description : Verifies JSON Fields "Driving distances" for fetch order
+	 * functionality when valid order Id is provided as input
+	 */
+	@Test()
+	public void TestCase_Fetch_Order_VerifyDrivingDistances_ValidID() {
+
+		JSONObject inputJSon = new JSONObject();
+		int id = 0;
+		try {
+
+			JSONArray actualDistances, expectedDistances = new JSONArray();
+			// Create test data
+			inputJSon = HelperMethods.getDefaultJSON(false);
+
+			// Place Order
+			id = HelperMethods.placeOrder(inputJSon);
+			Assert.assertTrue(id != 0, "ID Not Generated ");
+			expectedDistances = ApiCallHandler.getResponseJson().getJSONArray(field_distance);
+
+			HelperMethods.fetchOrder(id);
+			// Fetch driving distance from response
+			actualDistances = ApiCallHandler.getResponseJson().getJSONArray(field_distance);
+			logger.info("Length is : " + actualDistances.length());
+			Assert.assertEquals(actualDistances.length(), expectedDistances.length(),
+					"Number of Distances  do not match ");
+
+			for (int i = 0; i < actualDistances.length(); i++) {
+				Assert.assertEquals(actualDistances.getDouble(i), expectedDistances.getDouble(i),
+						"Distance value mismatch");
+
 			}
 
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+
+	 /** description : Verifies JSON Fields "Stops" for fetch order functionality when
+	 * valid order Id is provided as input
+	 */
+	@Test()
+	public void TestCase_Fetch_Order_VerifyFareAmount_ValidID() {
+
+		JSONObject inputJSon = new JSONObject();
+		int id = 0;
+		try {
+
+			// Create test data
+			inputJSon = HelperMethods.getDefaultJSON(false);
+
+			// Place Order
+			id = HelperMethods.placeOrder(inputJSon);
+			Assert.assertTrue(id != 0, "ID Not Generated ");
+			// fetch fare from place order response
+			JSONObject outputJSon = ApiCallHandler.getResponseJson().getJSONObject(field_fare);
+			double expectedFare = outputJSon.getDouble(field_amount);
+
+			HelperMethods.fetchOrder(id);
+			// fetch fare from fetch order response
+			outputJSon = ApiCallHandler.getResponseJson().getJSONObject(field_fare);
+			double actualFare = outputJSon.getDouble(field_amount);
+
+			logger.info("Fare is : " + actualFare);
+
+			Assert.assertEquals(actualFare, expectedFare, "Fare mismatch ");
+
+		} catch (ParseException e) {
+			// TODO Auto-generated catch block
+			Assert.fail(e.getMessage());
 		}
 
 	}
 
 	@BeforeMethod
 	public void beforeMethod(Method method) {
-		System.out.println("Starting test case :" + method.getName());
+		logger.info("Starting test case :" + method.getName());
 	}
 
 	@AfterMethod
 	public void afterMethod(ITestResult result) {
 
 		if (result.isSuccess())
-			System.out.println(result.getMethod().getMethodName() + " PASSED.");
+			logger.info(result.getMethod().getMethodName() + " PASSED.");
 		else
-			System.out.println(result.getMethod().getMethodName() + " FAILED");
+			logger.info(result.getMethod().getMethodName() + " FAILED");
 
 	}
 

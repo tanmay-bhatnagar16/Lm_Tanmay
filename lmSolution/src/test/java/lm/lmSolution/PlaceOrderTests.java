@@ -8,7 +8,7 @@ import lm.lmSolution.HelperMethods;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import java.lang.reflect.Method;
-
+import org.apache.log4j.Logger;
 import org.apache.http.ParseException;
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -16,10 +16,26 @@ import org.testng.Assert;
 import org.testng.ITestResult;
 
 public class PlaceOrderTests {
+	private static Logger logger = Logger.getLogger("LOG");
+	static String testCaseName;
+	static double fareBelowTwoKm;
+	static double fareAboveTwoKm;
+	static double rateBelowTwoKmNightCharge;
+	static double rateAboveTwoKmNightCharge;
 
+	private static String field_fare= "fare";
+	private static String field_distance= "drivingDistancesInMeters";
+	private static String field_amount= "amount";
+	private static String field_currency= "currency";
+	private static String field_message= "message";
+	private static String field_stops= "stops";
+	private static String field_orderAt= "OrderAT";
+	
+	
 
 	/**
-	 * description : Verifies place order functionality and checks generation of valid ID
+	 * description : Verifies place order functionality and checks generation of
+	 * valid ID
 	 */
 	@Test
 	public void Testcase_placeOrder_verifyID() {
@@ -31,356 +47,398 @@ public class PlaceOrderTests {
 			// Create test data
 			inputJSon = HelperMethods.getDefaultJSON(false);
 
-			//Place Order
+			// Place Order
 			id = HelperMethods.placeOrder(inputJSon);
 
-			System.out.println("ID is : " + id);
-			if (id == 0) {
-				Assert.fail("ID Not Generated ");
-			}
+			logger.info("ID is : " + id);
 
-		} catch (ParseException e) {
+			Assert.assertTrue(id != 0, "ID Not Generated ");
+
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Assert.fail(e.getMessage());
 		}
 
 	}
 
 	/**
-	 * description : Verifies place order functionality and checks Number of distance counts are correct as per provided json
+	 * description : Verifies place order functionality and checks currency field
+	 * 
+	 */
+	@Test
+	public void Testcase_placeOrder_verifyCurrency() {
+
+		JSONObject inputJSon = new JSONObject(), outputJSon;
+		String expectedCurrency;
+		int id = 0;
+		try {
+
+			// Create test data
+			expectedCurrency = HelperMethods.getExcelData("TestData", "currency");
+			inputJSon = HelperMethods.getDefaultJSON(false);
+
+			// Place Order
+			id = HelperMethods.placeOrder(inputJSon);
+			// fetch currency from response
+			outputJSon = ApiCallHandler.getResponseJson().getJSONObject(field_fare);
+			String actualcurrency = outputJSon.getString(field_currency);
+			logger.info("ID is : " + id);
+
+			Assert.assertEquals(actualcurrency, expectedCurrency, "Currency Not Correct ");
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	/**
+	 * description : Verifies place order functionality and checks Number of
+	 * distance counts are correct as per provided json
 	 */
 	@Test()
 	public void Testcase_placeOrder_verifyDistancesCount() {
 
 		JSONObject inputJSon = new JSONObject();
-		int expectedCount = 2;
+		int expectedCount;
 		try {
 
-			new JSONArray();
-			JSONArray array2 = new JSONArray();
+			JSONArray actualDistances = new JSONArray();
 			// Create test data
 			inputJSon = HelperMethods.getDefaultJSON(false);
+			expectedCount = inputJSon.getJSONArray(field_stops).length() - 1;
 
-			//Place Order
+			// Place Order
 			HelperMethods.placeOrder(inputJSon);
 			// Fetch driving distance from response
-			array2 = ApiCallHandler.getJSONObject().getJSONArray("drivingDistancesInMeters");
-			System.out.println("Length is : " + array2.length());
-			if (array2.length() != expectedCount) {
-				Assert.assertEquals(array2.length(), expectedCount, "Number of distances do not match ");
-			}
+			actualDistances = ApiCallHandler.getResponseJson().getJSONArray(field_distance);
+			logger.info("Length is : " + actualDistances.length());
+
+			Assert.assertEquals(actualDistances.length(), expectedCount, "Number of distances do not match ");
+
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Assert.fail(e.getMessage());
 		}
 
 	}
 
 	/**
-	 * description : Verifies place order functionality and checks that fare is correctly generated if distance is less than 2 kms
+	 * description : Verifies place order functionality and checks that fare is
+	 * correctly generated if distance is less than 2 kms
 	 */
 	@Test()
 	public void Testcase_placeOrder_verifyFareBelowTwoKms() {
 
-		JSONObject inputJSon = new JSONObject(), outputJSon1;
-		Float expectedFare = new Float(20.00);
-		float actualFare;
+		JSONObject inputJSon, outputJSon;
+		double expectedFare;
+		double actualFare;
 		try {
-
-			// Create test data
-			JSONArray array1 = new JSONArray();
-			new JSONArray();
-			JSONObject item = new JSONObject(), item1 = new JSONObject();
-			item.put("lat", 22.344674);
-			item.put("lng", 114.124651);
-			item1.put("lat", 22.344674);
-			item1.put("lng", 114.124351);
-			array1.put(item);
-			array1.put(item1);
-			inputJSon.put("stops", array1);			
-
-			//Place Order
-			HelperMethods.placeOrder(inputJSon);
 			
-			//fetch fare from response
-			outputJSon1 = ApiCallHandler.getJSONObject().getJSONObject("fare");
-			actualFare = outputJSon1.getFloat("amount");
-			System.out.println("Fare is : " + actualFare);
+			// Create test data
+			inputJSon = new JSONObject(HelperMethods.getExcelData("TestCaseParams", testCaseName));
+			expectedFare = Double.parseDouble(HelperMethods.getExcelData("TestData", "Fare_LessThan_2KM"));
 
-			if (actualFare != expectedFare) {
-				Assert.assertEquals(expectedFare, actualFare, "Fare amount do not match ");
-			}
-		} catch (ParseException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			// Place Order
+			HelperMethods.placeOrder(inputJSon);
+
+			// fetch fare from response
+			outputJSon = ApiCallHandler.getResponseJson().getJSONObject(field_fare);
+			actualFare = outputJSon.getDouble(field_amount);
+			logger.info("Fare is : " + actualFare);
+
+			Assert.assertEquals(actualFare, expectedFare, "Fare amount do not match ");
+
+		} catch (Exception e) {
+			logger.error("Exception is : " + e.getMessage());
 		}
 
 	}
 
 	/**
-	 * description : Verifies place order functionality and that fare is correctly generated if distance is more than 2 kms
+	 * description : Verifies place order functionality and that fare is correctly
+	 * generated if distance is more than 2 kms
 	 */
 	@Test()
 	public void Testcase_placeOrder_verifyFareAboveTwoKms() {
 		JSONObject inputJSon = new JSONObject(), outputJSon1;
-		float expectedFare = (float) (20 + 5 * (1224.00 / 200.00));
-		float actualFare;
+		double expectedFare;
+		double fareRate, baseFare, rateKms;
+		double actualFare;
 		try {
 
 			// Create test data
-			JSONArray array1 = new JSONArray();
+			inputJSon = new JSONObject(HelperMethods.getExcelData("TestCaseParams", testCaseName));
+			fareRate = Double.parseDouble(HelperMethods.getExcelData("TestData", "FareRate_MoreThan_2KM"));
+			baseFare = Double.parseDouble(HelperMethods.getExcelData("TestData", "Fare_LessThan_2KM"));
+			rateKms = Double.parseDouble(HelperMethods.getExcelData("TestData", "RateKMS"));
 
-			JSONObject item = new JSONObject(), item1 = new JSONObject();
-			item.put("lat", 22.344674);
-			item.put("lng", 114.124651);
-			item1.put("lat", 22.344674);
-			item1.put("lng", 114.126651);
-			array1.put(item);
-			array1.put(item1);
-			inputJSon.put("stops", array1);
-
-			//Place Order
+			// Place Order
 			HelperMethods.placeOrder(inputJSon);
-			
-			//fetch fare
-			outputJSon1 = ApiCallHandler.getJSONObject().getJSONObject("fare");
-			actualFare = outputJSon1.getFloat("amount");
-			System.out.println("Additional Fare is : " + actualFare);
 
-			if (actualFare != expectedFare) {
-				Assert.assertEquals(actualFare, expectedFare, "Fare amount do not match ");
-			}
-		} catch (ParseException e) {
+			// calculate expected fare
+			expectedFare = HelperMethods.calculateFare(ApiCallHandler.getResponseJson(), baseFare, fareRate, rateKms);
+			// fetch actual fare
+			outputJSon1 = ApiCallHandler.getResponseJson().getJSONObject(field_fare);
+			actualFare = outputJSon1.getDouble(field_amount);
+			logger.info("Additional Fare is : " + actualFare);
+
+			Assert.assertEquals(actualFare, expectedFare, "Fare amount do not match ");
+
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Assert.fail(e.getMessage());
 		}
 
 	}
 
 	/**
-	 * description : Verifies place advance  order functionality and checks generation of valid IDs
+	 * description : Verifies place advance order functionality and checks
+	 * generation of valid IDs
 	 */
 	@Test()
 	public void Testcase_placeAdvanceOrder_VerifyId() {
 		JSONObject inputJSon = new JSONObject();
 		int id = 0;
 		try {
-			
-			// Create test data
-			inputJSon = HelperMethods.getDefaultJSON(true);			
 
-			//Place Order
+			// Create test data
+			inputJSon = HelperMethods.getDefaultJSON(true);
+
+			// Place Order
 			id = HelperMethods.placeOrder(inputJSon);
 
-			System.out.println("Advance ID is : " + id);
-			if (id == 0) {
-				Assert.fail("ID Not Generated ");
-			}
+			logger.info("Advance ID is : " + id);
+			Assert.assertTrue(id != 0, "ID Not Generated ");
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Assert.fail(e.getMessage());
 		}
 
 	}
 
 	/**
-	 * description : Verifies place advance order functionality and checks Number of distance counts are correct as per provided json
+	 * description : Verifies place advance order functionality and checks Number of
+	 * distance counts are correct as per provided json
 	 */
 	@Test()
 	public void Testcase_placeAdvanceOrder_verifyDistancesCount() {
 
 		JSONObject inputJSon = new JSONObject();
 		int expectedCount = 2;
-		
+
 		try {
 			// Create test data
 			inputJSon = HelperMethods.getDefaultJSON(true);
+			expectedCount = inputJSon.getJSONArray(field_stops).length() - 1;
 
-			//Place Order
-			 HelperMethods.placeOrder(inputJSon);
-			 
-			 //Fetch distance
-			 JSONArray array2 = ApiCallHandler.getJSONObject().getJSONArray("drivingDistancesInMeters");
-			System.out.println("Length for Advance order is : " + array2.length());
-			if (array2.length() != expectedCount) {
-				Assert.assertEquals(array2.length(), expectedCount, "Number of distances do not match ");
-			}
-		} catch (ParseException e) { // TODO Auto-generated catch block e.printStackTrace();
+			// Place Order
+			HelperMethods.placeOrder(inputJSon);
+
+			// Fetch distance
+			JSONArray actualDistances = ApiCallHandler.getResponseJson().getJSONArray(field_distance);
+			logger.info("Length for Advance order is : " + actualDistances.length());
+
+			Assert.assertEquals(actualDistances.length(), expectedCount, "Number of distances do not match ");
+
+		} catch (Exception e) { // TODO Auto-generated catch block
+			Assert.fail(e.getMessage());
 		}
 	}
 
 	/**
-	 * description : Verifies place advance order functionality and checks that fare is correctly generated if distance is less than 2 kms
+	 * description : Verifies place advance order functionality and checks that fare
+	 * is correctly generated if distance is less than 2 kms
 	 */
 	@Test()
 	public void Testcase_placeAdvanceOrder_verifyFareBelowTwoKms() {
 
 		JSONObject inputJSon = new JSONObject(), outputJSon1;
-		float expectedFare = (float) 20.00;
-		float actualFare;
+		double expectedFare;
+		double actualFare;
 		try {
+			expectedFare = Double.parseDouble(HelperMethods.getExcelData("TestData", "Fare_LessThan_2KM"));
 			// Create test data
-			JSONArray array1 = new JSONArray();
-			JSONObject item = new JSONObject(), item1 = new JSONObject();
-			item.put("lat", 22.344674);
-			item.put("lng", 114.124651);
-			item1.put("lat", 22.344674);
-			item1.put("lng", 114.124351);
-			array1.put(item);
-			array1.put(item1);
-			inputJSon.put("orderAT", "2019-03-03T13:00:00.000Z");
-			inputJSon.put("stops", array1);
+			inputJSon = new JSONObject(HelperMethods.getExcelData("TestCaseParams", testCaseName));
+			inputJSon.put(field_orderAt, HelperMethods.getFuturePastDate(true, false, 0));
 
-			//Place Order
+			// Place Order
 			HelperMethods.placeOrder(inputJSon);
-			
-			//Fetch fare
-			outputJSon1 = ApiCallHandler.getJSONObject().getJSONObject("fare");
-			actualFare = outputJSon1.getFloat("amount");
-			System.out.println("Fare for Advance booking is : " + actualFare);
 
-			if (actualFare != expectedFare) {
-				Assert.assertEquals(actualFare, expectedFare, "Fare amount do not match ");
-			}
-		} catch (ParseException e) {
+			// Fetch fare
+			outputJSon1 = ApiCallHandler.getResponseJson().getJSONObject(field_fare);
+			actualFare = outputJSon1.getFloat(field_amount);
+			logger.info("Fare for Advance booking is : " + actualFare);
+
+			Assert.assertEquals(actualFare, expectedFare, "Fare amount do not match ");
+
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Assert.fail(e.getMessage());
 		}
 	}
 
 	/**
-	 * description : Verifies place advance order functionality and that fare is correctly generated if distance is more than 2 kms
+	 * description : Verifies place advance order functionality and that fare is
+	 * correctly generated if distance is more than 2 kms
 	 */
 	@Test()
 	public void Testcase_placeAdvanceOrder_verifyFareAboveTwoKms() {
-		JSONObject inputJSon = new JSONObject(), outputJSon1; 
-		// expected fare calculation
-		float expectedFare = (float) (20 + 5 * (1224.00 / 200.00));
-		float actualFare;
+		JSONObject inputJSon = new JSONObject(), outputJSon1;
+
+		double expectedFare;
+		double fareRate, baseFare, rateKms;
+		double actualFare;
 		try {
 
 			// Create test data
-			JSONArray array1 = new JSONArray();
-			JSONObject item = new JSONObject(), item1 = new JSONObject();
-			item.put("lat", 22.344674);
-			item.put("lng", 114.124651);
-			item1.put("lat", 22.344674);
-			item1.put("lng", 114.126651);
-			array1.put(item);
-			array1.put(item1);
-			inputJSon.put("orderAT", "2019-03-03T13:00:00.000Z");
-			inputJSon.put("stops", array1);
+			inputJSon = new JSONObject(HelperMethods.getExcelData("TestCaseParams", testCaseName));
+			inputJSon.put(field_orderAt, HelperMethods.getFuturePastDate(true, false, 0));
+			fareRate = Double.parseDouble(HelperMethods.getExcelData("TestData", "FareRate_MoreThan_2KM"));
+			baseFare = Double.parseDouble(HelperMethods.getExcelData("TestData", "Fare_LessThan_2KM"));
+			rateKms = Double.parseDouble(HelperMethods.getExcelData("TestData", "RateKMS"));
 
-			//Place Order
+			// Place Order
 			HelperMethods.placeOrder(inputJSon);
-			
-			//Fetch fare
-			outputJSon1 = ApiCallHandler.getJSONObject().getJSONObject("fare");
-			actualFare = outputJSon1.getFloat("amount");
-			System.out.println("Additional Fare for Advance booking is : " + actualFare);
-			if (actualFare != expectedFare) {
-				Assert.assertEquals(actualFare, expectedFare, "Fare amount do not match ");
-			}
-		} catch (ParseException e) {
+
+			// calculate expected fare
+			expectedFare = HelperMethods.calculateFare(ApiCallHandler.getResponseJson(), baseFare, fareRate, rateKms);
+
+			// Fetch fare
+			outputJSon1 = ApiCallHandler.getResponseJson().getJSONObject("fare");
+			actualFare = outputJSon1.getDouble("amount");
+			logger.info("Additional Fare for Advance booking is : " + actualFare);
+
+			Assert.assertEquals(actualFare, expectedFare, "Fare amount do not match ");
+
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 
-			e.printStackTrace();
+			Assert.fail(e.getMessage());
 		}
 	}
 
 	/**
-	 * description : Verifies place advance order functionality and that NIGHT fare is correctly generated if distance is less than 2 kms
+	 * description : Verifies place advance order functionality and that NIGHT fare
+	 * is correctly generated if distance is less than 2 kms
 	 */
 	@Test()
 	public void Testcase_placeAdvanceOrder_verifyFareBelowTwoKms_NightCharges() {
 
-		JSONObject inputJSon = new JSONObject(),  outputJSon1;
-		float expectedFare = (float) 30.00;
-		float actualFare;
+		JSONObject inputJSon = new JSONObject(), outputJSon1;
+		double expectedFare;
+		double actualFare;
 		try {
+			expectedFare = Double.parseDouble(HelperMethods.getExcelData("TestData", "Fare_LessThan_2KM_Night"));
 			// Create test data
-			JSONArray array1 = new JSONArray();
-			JSONObject item = new JSONObject(), item1 = new JSONObject();
-			item.put("lat", 22.344674);
-			item.put("lng", 114.124651);
-			item1.put("lat", 22.344674);
-			item1.put("lng", 114.124351);
-			array1.put(item);
-			array1.put(item1);// array1.put(item2);
-			inputJSon.put("orderAT", "2019-03-03T02:00:00.000Z");
-			inputJSon.put("stops", array1);
+			inputJSon = new JSONObject(HelperMethods.getExcelData("TestCaseParams", testCaseName));
+			inputJSon.put(field_orderAt, HelperMethods.getFuturePastDate(true, true, 0));
 
-			//Place Order
+			// Place Order
 			HelperMethods.placeOrder(inputJSon);
-			
+
 			// fetch fare
-			outputJSon1 = ApiCallHandler.getJSONObject().getJSONObject("fare");
-			actualFare = outputJSon1.getFloat("amount");
-			System.out.println("Night Fare for Advance booking is : " + actualFare);
-			if (actualFare != expectedFare) {
-				Assert.assertEquals(actualFare, expectedFare, "Fare amount do not match ");
-			}
-		} catch (ParseException e) { //
+			outputJSon1 = ApiCallHandler.getResponseJson().getJSONObject(field_fare);
+			actualFare = outputJSon1.getFloat(field_amount);
+			logger.info("Night Fare for Advance booking is : " + actualFare);
+
+			Assert.assertEquals(actualFare, expectedFare, "Fare amount do not match ");
+		} catch (Exception e) { //
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Assert.fail(e.getMessage());
 		}
 	}
 
 	/**
-	 * description : Verifies place advance order functionality and that NIGHT fare is correctly generated if distance is less than 2 kms
+	 * description : Verifies place advance order functionality and that NIGHT fare
+	 * is correctly generated if distance is less than 2 kms
 	 */
 	@Test()
 	public void Testcase_placeAdvanceOrder_verifyFareAboveTwoKms_NightCharges() {
 		JSONObject inputJSon = new JSONObject(), outputJSon1;
-		// fare calculation
-		float expectedFare = (float) (30 + 8 * (1224.00 / 200.00));
-		float actualFare;
+		double fareRate, baseFare, rateKms, expectedFare;
+		double actualFare;
 		try {
 
 			// Create test data
-			JSONArray array1 = new JSONArray();
-			JSONObject item = new JSONObject(), item1 = new JSONObject();
-			item.put("lat", 22.344674);
-			item.put("lng", 114.124651);
-			item1.put("lat", 22.344674);
-			item1.put("lng", 114.126651);
-			array1.put(item);
-			array1.put(item1);
-			inputJSon.put("orderAT", "2019-03-03T02:00:00.000Z");
-			inputJSon.put("stops", array1);
+			inputJSon = new JSONObject(HelperMethods.getExcelData("TestCaseParams", testCaseName));
+			inputJSon.put(field_orderAt, HelperMethods.getFuturePastDate(true, false, 0));
+			fareRate = Double.parseDouble(HelperMethods.getExcelData("TestData", "FareRate_MoreThan_2KM"));
+			baseFare = Double.parseDouble(HelperMethods.getExcelData("TestData", "Fare_LessThan_2KM"));
+			rateKms = Double.parseDouble(HelperMethods.getExcelData("TestData", "RateKMS"));
 
-			//Place Order
+			// Place Order
 			HelperMethods.placeOrder(inputJSon);
-			//Fetch fare
-			outputJSon1 = ApiCallHandler.getJSONObject().getJSONObject("fare");
-			actualFare = outputJSon1.getFloat("amount");
-			System.out.println("Additional  Night Fare for Advance booking is : " + actualFare);
 
-			if (actualFare != expectedFare) {
-				Assert.assertEquals(actualFare, expectedFare, "Fare amount do not match ");
-			}
-		} catch (ParseException e) { //
+			// calculate expected fare
+			expectedFare = HelperMethods.calculateFare(ApiCallHandler.getResponseJson(), baseFare, fareRate, rateKms);
+
+			// Fetch fare
+			outputJSon1 = ApiCallHandler.getResponseJson().getJSONObject(field_fare);
+			actualFare = outputJSon1.getDouble(field_amount);
+			logger.info("Additional  Night Fare for Advance booking is : " + actualFare);
+
+			Assert.assertEquals(actualFare, expectedFare, "Fare amount do not match ");
+
+		} catch (Exception e) { //
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Assert.fail(e.getMessage());
+	
+		}
+
+	}
+
+	/*
+	 * description : Negative Scenario : Verify the behavior when only single Stop
+	 * is sent in request valid ID
+	 */
+	@Test
+	public void Testcase_placeOrder_verifySingleStopValue() {
+
+		JSONObject inputJSon = new JSONObject();
+		int id = 0;
+		String actualMessage = null,expectedMessage;
+		try {
+
+			// Create test data
+			inputJSon = new JSONObject(HelperMethods.getExcelData("TestCaseParams", testCaseName));
+			expectedMessage = HelperMethods.getExcelData("ErrorMessages", "ErrorMessage_IncorrectField_Stops");
+
+			// Place Order
+			id = HelperMethods.placeOrder(inputJSon);
+
+			// Fetch message
+			if(id==0)
+			{
+				actualMessage= ApiCallHandler.getResponseJson().getString(field_message);
+			}
+			logger.info("Message for incorrect stops is : " + actualMessage);
+
+
+			Assert.assertEquals(actualMessage, expectedMessage, "Failure Message do not match ");
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			Assert.fail(e.getMessage());
 		}
 
 	}
 
 	@BeforeMethod
 	public void beforeMethod(Method method) {
-		System.out.println("Starting test case :" + method.getName() );
+		testCaseName = method.getName();
+		logger.info("Starting test case :" + testCaseName);
 	}
 
 	@AfterMethod
 	public void afterMethod(ITestResult result) {
 
-		if(result.isSuccess())
-			System.out.println(result.getMethod().getMethodName()+  " PASSED.");
+		if (result.isSuccess())
+			logger.info(testCaseName + " PASSED.");
 		else
-			System.out.println(result.getMethod().getMethodName()+  " FAILED");
-			
+			logger.info(testCaseName + " FAILED");
+
 	}
-
-
 
 }

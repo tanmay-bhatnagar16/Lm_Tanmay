@@ -7,13 +7,17 @@ import lm.lmSolution.HelperMethods;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import java.lang.reflect.Method;
-
-import org.apache.http.ParseException;
+import org.apache.log4j.Logger;
+import org.apache.http.HttpStatus;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.ITestResult;
 
 public class DriverTakeOrderTests {
+	private static Logger logger = Logger.getLogger("LOG");
+	private static String field_status = "status";
+	private static String field_message = "message";
+
 
 	/**
 	 * description : Verifies take order functionality when valid order Id is
@@ -22,27 +26,56 @@ public class DriverTakeOrderTests {
 	@Test()
 	public void TestCase_Take_Order_VerifyStatusCode_ValidID() {
 
-		JSONObject inputJSon, outputJSon = null;
+		JSONObject inputJSon;
 		int id = 0, statusCode = 0;
 		try {
 			// Create test data
 			inputJSon = HelperMethods.getDefaultJSON(false);
 			// Place order
 			id = HelperMethods.placeOrder(inputJSon);
-			
-			// Take order
-			outputJSon = HelperMethods.takeOrder(id);
+			Assert.assertTrue(id != 0, "ID Not Generated ");
+
+			HelperMethods.takeOrder(id);
 			// fetch status code
-			statusCode = HelperMethods.getStatusCode();
-			System.out.println("Valid Status Code for Take Order " + statusCode);
+			statusCode = ApiCallHandler.getstatusCode();
+			logger.info("Valid Status Code for Take Order " + statusCode);
 
-			if (outputJSon == null || statusCode != 200) {
-				Assert.fail("Request Failed with status code : " + statusCode);
-			}
+			Assert.assertEquals(statusCode, HttpStatus.SC_OK, "Status do not match ");
 
-		} catch (ParseException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	/**
+	 * description : Verifies take order functionality when valid order Id is
+	 * provided as input . Flow : ASSIGNING To Ongoing
+	 */
+	@Test()
+	public void TestCase_Take_Order_VerifyOrderStatus_ValidID() {
+
+		JSONObject inputJSon, outputJson;
+		int id = 0;
+		String expectedStatus, actualStatus;
+		try {
+			// Create test data
+			inputJSon = HelperMethods.getDefaultJSON(false);
+			expectedStatus = HelperMethods.getExcelData("TestData", "Status_Ongoing");
+			// Place order
+			id = HelperMethods.placeOrder(inputJSon);
+			Assert.assertTrue(id != 0, "ID Not Generated ");
+
+			outputJson = HelperMethods.takeOrder(id);
+			// Get status code
+			actualStatus = outputJson.getString(field_status);
+			logger.info("Valid Status " + actualStatus);
+
+			Assert.assertEquals(actualStatus, expectedStatus, "Status do not match ");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			Assert.fail(e.getMessage());
 		}
 
 	}
@@ -54,27 +87,26 @@ public class DriverTakeOrderTests {
 	@Test()
 	public void TestCase_Take_Order_VerifyStatusCode_InvalidID() {
 		JSONObject inputJSon;
-		int id = 0, statusCodeExpected = 404, actualStatus;
+		int id = 0, statusCodeExpected = HttpStatus.SC_NOT_FOUND, actualStatus;
 		try {
 			// Create test data
 			inputJSon = HelperMethods.getDefaultJSON(false);
 			// Place order
 			id = HelperMethods.placeOrder(inputJSon);
-			
+			Assert.assertTrue(id != 0, "ID Not Generated ");
+
 			// Take order
 			HelperMethods.takeOrder((id + 1));
-			
+
 			// Fetch status code
-			actualStatus = HelperMethods.getStatusCode();
-			System.out.println("InValid Status Code for Take Order" + actualStatus);
+			actualStatus = ApiCallHandler.getstatusCode();
+			logger.info("InValid Status Code for Take Order" + actualStatus);
 
-			if (actualStatus != statusCodeExpected) {
-				Assert.assertEquals(actualStatus, statusCodeExpected, "Status do not match ");
-			}
+			Assert.assertEquals(actualStatus, statusCodeExpected, "Status do not match ");
 
-		} catch (ParseException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Assert.fail(e.getMessage());
 		}
 
 	}
@@ -86,44 +118,76 @@ public class DriverTakeOrderTests {
 	@Test()
 	public void TestCase_Take_Order_VerifyStatusCode_InvalidFlow() {
 		JSONObject inputJSon;
-		int id = 0, statusCodeExpected = 422, actualStatus;
+		int id = 0, statusCodeExpected = HttpStatus.SC_UNPROCESSABLE_ENTITY, actualStatus;
 		try {
 			// Create test data
 			inputJSon = HelperMethods.getDefaultJSON(false);
-			
+
 			// Place order
 			id = HelperMethods.placeOrder(inputJSon);
-			
+			Assert.assertTrue(id != 0, "ID Not Generated ");
+
 			// Cancel order
 			HelperMethods.cancelOrder(id);
-			
+
 			HelperMethods.takeOrder(id);
-			actualStatus = HelperMethods.getStatusCode();
-			System.out.println("InValid Status Code for Incorrect flow of Take Order" + actualStatus);
+			actualStatus = ApiCallHandler.getstatusCode();
+			logger.info("InValid Status Code for Incorrect flow of Take Order" + actualStatus);
 
-			if (actualStatus != statusCodeExpected) {
-				Assert.assertEquals(actualStatus, statusCodeExpected, "Status do not match ");
-			}
+			Assert.assertEquals(actualStatus, statusCodeExpected, "Status do not match ");
 
-		} catch (ParseException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	/**
+	 * description : Verifies Error Message for take order functionality when
+	 * invalid order Id is provided as input
+	 */
+	@Test()
+	public void TestCase_Take_Order_VerifyErrorMessage_InvalidID() {
+		JSONObject inputJSon;
+		int id = 0;
+		String actualStatus, expectedStatus;
+		try {
+			// Create test data
+			inputJSon = HelperMethods.getDefaultJSON(false);
+			expectedStatus = HelperMethods.getExcelData("ErrorMessages", "ErrorMessage_OrderNotFound");
+			// Place order
+			id = HelperMethods.placeOrder(inputJSon);
+			Assert.assertTrue(id != 0, "ID Not Generated ");
+
+			// fetch order with incorrect id
+			HelperMethods.takeOrder((id + 1));
+
+			// Get status code
+			actualStatus = ApiCallHandler.getResponseJson().getString(field_message);
+
+			logger.info("Error Message" + actualStatus);
+			Assert.assertEquals(actualStatus, expectedStatus, "Error Message do not match ");
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			Assert.fail(e.getMessage());
 		}
 
 	}
 
 	@BeforeMethod
 	public void beforeMethod(Method method) {
-		System.out.println("Starting test case :" + method.getName());
+		logger.info("Starting test case :" + method.getName());
 	}
 
 	@AfterMethod
 	public void afterMethod(ITestResult result) {
 
 		if (result.isSuccess())
-			System.out.println(result.getMethod().getMethodName() + " PASSED.");
+			logger.info(result.getMethod().getMethodName() + " PASSED.");
 		else
-			System.out.println(result.getMethod().getMethodName() + " FAILED");
+			logger.info(result.getMethod().getMethodName() + " FAILED");
 
 	}
 

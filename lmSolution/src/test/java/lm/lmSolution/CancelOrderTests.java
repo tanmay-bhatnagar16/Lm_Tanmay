@@ -7,13 +7,17 @@ import lm.lmSolution.HelperMethods;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.AfterMethod;
 import java.lang.reflect.Method;
-
-import org.apache.http.ParseException;
+import org.apache.log4j.Logger;
+import org.apache.http.HttpStatus;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.ITestResult;
 
 public class CancelOrderTests {
+	private static Logger logger = Logger.getLogger("LOG");
+	private static String field_status = "status";
+	private static String field_message = "message";
+
 
 	/**
 	 * description : Verifies Cancel order functionality when valid order Id is
@@ -22,29 +26,97 @@ public class CancelOrderTests {
 	@Test()
 	public void TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterPlaceOrder() {
 
-		JSONObject inputJSon, outputJSon = null;
+		JSONObject inputJSon;
 		int id = 0, statusCode = 0;
 		try {
 			// Create test data
 			inputJSon = HelperMethods.getDefaultJSON(false);
-			
-			//Place Order
+
+			// Place Order
 			id = HelperMethods.placeOrder(inputJSon);
+			Assert.assertTrue(id != 0, "ID Not Generated ");
 
-			//Cancel Order
-			outputJSon = HelperMethods.cancelOrder(id);
-			
+			HelperMethods.cancelOrder(id);
+
 			// Get status code
-			statusCode = HelperMethods.getStatusCode();
-			System.out.println("Valid Status Code for Cancel Order" + statusCode);
+			statusCode = ApiCallHandler.getstatusCode();
+			logger.info("Valid Status Code for Cancel Order" + statusCode);
 
-			if (outputJSon == null || statusCode != 200) {
-				Assert.fail("Request Failed with status code : " + statusCode);
-			}
+			Assert.assertEquals(statusCode, HttpStatus.SC_OK, "Status do not match ");
 
-		} catch (ParseException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	/**
+	 * description : Verifies Order status for Cancel order functionality when valid
+	 * order Id is provided as input. Flow : ASSINGING to Cancelled
+	 */
+	@Test()
+	public void TestCase_Cancel_Order_VerifyOrderstatus_ValidID_AfterPlaceOrder() {
+
+		JSONObject inputJSon, outputJson;
+		int id = 0;
+		String actualStatus, expectedStatus;
+		try {
+			// Create test data
+			inputJSon = HelperMethods.getDefaultJSON(false);
+			expectedStatus = HelperMethods.getExcelData("TestData", "Status_Cancelled");
+
+			// Place Order
+			id = HelperMethods.placeOrder(inputJSon);
+			Assert.assertTrue(id != 0, "ID Not Generated ");
+
+			// Cancel Order
+			outputJson = HelperMethods.cancelOrder(id);
+			actualStatus = outputJson.getString(field_status);
+
+			logger.info("Valid Status " + actualStatus);
+			Assert.assertEquals(actualStatus, expectedStatus, "Status do not match ");
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	/**
+	 * description : Verifies Order status for Cancel order functionality when valid
+	 * order Id is provided as input. Flow : OnGoing to Cancelled
+	 */
+	@Test()
+	public void TestCase_Cancel_Order_VerifyOrderstatus_ValidID_AfterTakeOrder() {
+
+		JSONObject inputJSon, outputJson;
+		int id = 0;
+		String actualStatus, expectedStatus;
+		try {
+			// Create test data
+			inputJSon = HelperMethods.getDefaultJSON(false);
+			expectedStatus = HelperMethods.getExcelData("TestData", "Status_Cancelled");
+
+			// Place Order
+			id = HelperMethods.placeOrder(inputJSon);
+			Assert.assertTrue(id != 0, "ID Not Generated ");
+
+			// Take Order
+			HelperMethods.takeOrder(id);
+			Assert.assertTrue(ApiCallHandler.getResponseJson().has("id"), "Take Order failed");
+
+			// Cancel Order
+			outputJson = HelperMethods.cancelOrder(id);
+			actualStatus = outputJson.getString(field_status);
+
+			logger.info("Valid Status " + actualStatus);
+			Assert.assertEquals(actualStatus, expectedStatus, "Status do not match ");
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			Assert.fail(e.getMessage());
 		}
 
 	}
@@ -56,32 +128,31 @@ public class CancelOrderTests {
 	@Test()
 	public void TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterTakeOrder() {
 
-		JSONObject inputJSon, outputJSon = null;
+		JSONObject inputJSon;
 		int id = 0, statusCode = 0;
 		try {
 			// Create test data
 			inputJSon = HelperMethods.getDefaultJSON(false);
-			
-			//Place Order
+
+			// Place Order
 			id = HelperMethods.placeOrder(inputJSon);
-			
-			//Take Order
+			Assert.assertTrue(id != 0, "ID Not Generated ");
+
+			// Take Order
 			HelperMethods.takeOrder(id);
+			Assert.assertTrue(ApiCallHandler.getResponseJson().has("id"), "Take Order failed");
 
-			//Cancel Order
-			outputJSon = HelperMethods.cancelOrder(id);
-			
+			HelperMethods.cancelOrder(id);
+
 			// Get status code
-			statusCode = HelperMethods.getStatusCode();
-			System.out.println("Valid Status Code for Cancel Order" + statusCode);
+			statusCode = ApiCallHandler.getstatusCode();
+			logger.info("Valid Status Code for Cancel Order" + statusCode);
 
-			if (outputJSon == null || statusCode != 200) {
-				Assert.fail("Request Failed with status code : " + statusCode);
-			}
+			Assert.assertEquals(statusCode, HttpStatus.SC_OK, "Status do not match ");
 
-		} catch (ParseException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Assert.fail(e.getMessage());
 		}
 
 	}
@@ -93,82 +164,115 @@ public class CancelOrderTests {
 	@Test()
 	public void TestCase_Cancel_Order_VerifyStatusCode_InvalidID() {
 		JSONObject inputJSon;
-		int id = 0, statusCodeExpected = 404, actualStatus;
+		int id = 0, statusCodeExpected = HttpStatus.SC_NOT_FOUND, actualStatus;
 		try {
+
 			// Create test data
 			inputJSon = HelperMethods.getDefaultJSON(false);
-
-			//Place Order
+			// Place Order
 			id = HelperMethods.placeOrder(inputJSon);
-			
-			//Cancel Order for invalid id
+			Assert.assertTrue(id != 0, "ID Not Generated ");
+
+			// Cancel Order for invalid id
 			HelperMethods.cancelOrder((id + 1));
-			
+
 			// Get status code
-			actualStatus = HelperMethods.getStatusCode();
-			System.out.println("InValid Status Code for Cancel Order" + actualStatus);
+			actualStatus = ApiCallHandler.getstatusCode();
+			logger.info("InValid Status Code for Cancel Order" + actualStatus);
 
-			if (actualStatus != statusCodeExpected) {
-				Assert.assertEquals(actualStatus, statusCodeExpected, "Status do not match ");
-			}
+			Assert.assertEquals(actualStatus, statusCodeExpected, "Status do not match ");
 
-		} catch (ParseException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Assert.fail(e.getMessage());
 		}
 
 	}
 
 	/**
-	 * description : Verifies cancel order functionality when invalid flow
-	 * is followed : from Completed to Cancel
+	 * description : Verifies cancel order functionality when invalid flow is
+	 * followed : from Completed to Cancel
 	 */
 	@Test()
 	public void TestCase_cancel_Order_VerifyStatusCode_InvalidFlow() {
 		JSONObject inputJSon;
-		int id = 0, statusCodeExpected = 422, actualStatus;
+		int id = 0, statusCodeExpected = HttpStatus.SC_UNPROCESSABLE_ENTITY, actualStatus;
 		try {
 			// Create test data
 			inputJSon = HelperMethods.getDefaultJSON(false);
 
-			//Place Order
+			// Place Order
 			id = HelperMethods.placeOrder(inputJSon);
-			
-			//Take Order
+			Assert.assertTrue(id != 0, "ID Not Generated ");
+
+			// Take Order
 			HelperMethods.takeOrder(id);
-			
-			//Complete Order
+			Assert.assertTrue(ApiCallHandler.getResponseJson().has("id"), "Take Order failed");
+
+			// Complete Order
 			HelperMethods.completeOrder(id);
+			Assert.assertTrue(ApiCallHandler.getResponseJson().has("id"), "Complete Order failed");
 
-			//Cancel Order
+			// Cancel Order
 			HelperMethods.cancelOrder(id);
-			
-			actualStatus = HelperMethods.getStatusCode();
-			System.out.println("InValid Status Code for Incorrect flow of Cancel Order" + actualStatus);
 
-			if (actualStatus != statusCodeExpected) {
-				Assert.assertEquals(actualStatus, statusCodeExpected, "Status do not match ");
-			}
+			actualStatus = ApiCallHandler.getstatusCode();
+			logger.info("InValid Status Code for Incorrect flow of Cancel Order" + actualStatus);
 
-		} catch (ParseException e) {
+			Assert.assertEquals(actualStatus, statusCodeExpected, "Status do not match ");
+
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Assert.fail(e.getMessage());
+		}
+
+	}
+
+	/**
+	 * description : Verifies Error Message for cancel order functionality when
+	 * invalid order Id is provided as input
+	 */
+	@Test()
+	public void TestCase_Cancel_Order_VerifyErrorMessage_InvalidID() {
+		JSONObject inputJSon;
+		int id = 0;
+		String actualStatus, expectedStatus;
+		try {
+			// Create test data
+			inputJSon = HelperMethods.getDefaultJSON(false);
+			expectedStatus = HelperMethods.getExcelData("ErrorMessages", "ErrorMessage_OrderNotFound");
+			// Place order
+			id = HelperMethods.placeOrder(inputJSon);
+			Assert.assertTrue(id != 0, "ID Not Generated ");
+
+			// cancel order with incorrect id
+			HelperMethods.cancelOrder((id + 1));
+
+			// Get status message
+			actualStatus = ApiCallHandler.getResponseJson().getString(field_message);
+
+			logger.info("Error Message" + actualStatus);
+			Assert.assertEquals(actualStatus, expectedStatus, "Error Message do not match ");
+
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			Assert.fail(e.getMessage());
 		}
 
 	}
 
 	@BeforeMethod
 	public void beforeMethod(Method method) {
-		System.out.println("Starting test case :" + method.getName());
+		logger.info("Starting test case :" + method.getName());
 	}
 
 	@AfterMethod
 	public void afterMethod(ITestResult result) {
 
 		if (result.isSuccess())
-			System.out.println(result.getMethod().getMethodName() + " PASSED.");
+			logger.info(result.getMethod().getMethodName() + " PASSED.");
 		else
-			System.out.println(result.getMethod().getMethodName() + " FAILED");
+			logger.info(result.getMethod().getMethodName() + " FAILED");
 
 	}
 }

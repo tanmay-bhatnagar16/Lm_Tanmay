@@ -1,62 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [TmpSuite]">
-  <test name="TmpTest(failed)">
+<suite name="Failed suite [Suite]">
+  <test name="Test(failed)">
     <classes>
-      <class name="lalamove.lalamoveSolution.PlaceOrderTests">
-        <methods>
-          <include name="beforeSuite"/>
-          <include name="afterTest"/>
-          <include name="beforeTest"/>
-          <include name="afterMethod"/>
-          <include name="Testcase_placeOrder_verifyFareAboveTwoKms"/>
-          <include name="beforeMethod"/>
-          <include name="beforeClass"/>
-          <include name="afterSuite"/>
-          <include name="afterClass"/>
-          <include name="Testcase_placeOrder_verifyFareBelowTwoKms"/>
-        </methods>
-      </class> <!-- lalamove.lalamoveSolution.PlaceOrderTests -->
-      <class name="lalamove.lalamoveSolution.DriverCompleteOrderTests">
-        <methods>
-          <include name="afterTest"/>
-          <include name="afterMethod"/>
-          <include name="beforeTest"/>
-          <include name="beforeMethod"/>
-          <include name="beforeClass"/>
-          <include name="afterClass"/>
-        </methods>
-      </class> <!-- lalamove.lalamoveSolution.DriverCompleteOrderTests -->
-      <class name="lalamove.lalamoveSolution.FetchOrderTests">
-        <methods>
-          <include name="beforeTest"/>
-          <include name="beforeMethod"/>
-          <include name="afterClass"/>
-          <include name="afterMethod"/>
-          <include name="afterTest"/>
-          <include name="beforeClass"/>
-        </methods>
-      </class> <!-- lalamove.lalamoveSolution.FetchOrderTests -->
-      <class name="lalamove.lalamoveSolution.CancelOrderTests">
+      <class name="lm.lmSolution.FetchOrderTests">
         <methods>
           <include name="beforeMethod"/>
-          <include name="beforeClass"/>
           <include name="afterMethod"/>
-          <include name="beforeTest"/>
-          <include name="afterClass"/>
-          <include name="afterTest"/>
         </methods>
-      </class> <!-- lalamove.lalamoveSolution.CancelOrderTests -->
-      <class name="lalamove.lalamoveSolution.DriverTakeOrderTests">
+      </class> <!-- lm.lmSolution.FetchOrderTests -->
+      <class name="lm.lmSolution.DriverCompleteOrderTests">
         <methods>
-          <include name="afterClass"/>
-          <include name="afterMethod"/>
-          <include name="beforeTest"/>
-          <include name="beforeClass"/>
           <include name="beforeMethod"/>
-          <include name="afterTest"/>
+          <include name="afterMethod"/>
         </methods>
-      </class> <!-- lalamove.lalamoveSolution.DriverTakeOrderTests -->
+      </class> <!-- lm.lmSolution.DriverCompleteOrderTests -->
+      <class name="lm.lmSolution.DriverTakeOrderTests">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- lm.lmSolution.DriverTakeOrderTests -->
+      <class name="lm.lmSolution.CancelOrderTests">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- lm.lmSolution.CancelOrderTests -->
+      <class name="lm.lmSolution.PlaceOrderTests">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="Testcase_placeAdvanceOrder_verifyFareBelowTwoKms_NightCharges"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- lm.lmSolution.PlaceOrderTests -->
     </classes>
-  </test> <!-- TmpTest(failed) -->
-</suite> <!-- Failed suite [TmpSuite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

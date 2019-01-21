@@ -4,8 +4,8 @@
     <classes>
        <class name="lm.lmSolution.PlaceOrderTests"/>
        <class name="lm.lmSolution.FetchOrderTests"/>
-      <class name="lm.lmSolution.DriverTakeOrderTests"/>
-       <class name="lm.lmSolution.DriverCompleteOrderTests"/>
+     <class name="lm.lmSolution.DriverTakeOrderTests"/> 
+        <class name="lm.lmSolution.DriverCompleteOrderTests"/>
        <class name="lm.lmSolution.CancelOrderTests"/> 
     </classes>
   </test> <!-- Test -->

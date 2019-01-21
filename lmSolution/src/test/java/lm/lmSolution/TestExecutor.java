@@ -5,9 +5,10 @@ package lm.lmSolution;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//import org.apache.commons.logging.impl.Log4JLogger;
+import org.apache.log4j.Logger;
 import org.testng.TestNG;
-import org.testng.log4testng.Logger;
+//import org.testng.log4testng.Logger;
 import org.testng.xml.XmlClass;
 import org.testng.xml.XmlSuite;
 import org.testng.xml.XmlTest;
@@ -17,7 +18,8 @@ import org.testng.xml.XmlTest;
  *
  */
 public class TestExecutor {
-	private static Logger logger = Logger.getLogger(TestExecutor.class);
+	private static Logger logger = Logger.getLogger("LOG");
+	
 
 	/**
 	 * description : Main method to execute the test cases from code
@@ -27,6 +29,8 @@ public class TestExecutor {
 		
 		try
 		{
+		//read the properties file and set global parameters
+		
 		
 		XmlSuite suite = new XmlSuite();
 		suite.setName("TmpSuite");
@@ -56,4 +60,5 @@ public class TestExecutor {
 	
 	}
 
+	
 }
