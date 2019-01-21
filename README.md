@@ -1,4 +1,3 @@
-# Read Me doc
 
 # Setup and execution:
 
