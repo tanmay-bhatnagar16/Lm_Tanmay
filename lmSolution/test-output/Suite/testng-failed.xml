@@ -3,37 +3,37 @@
 <suite name="Failed suite [Suite]">
   <test name="Test(failed)">
     <classes>
-      <class name="lm.lmSolution.FetchOrderTests">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- lm.lmSolution.FetchOrderTests -->
-      <class name="lm.lmSolution.DriverCompleteOrderTests">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- lm.lmSolution.DriverCompleteOrderTests -->
-      <class name="lm.lmSolution.DriverTakeOrderTests">
-        <methods>
-          <include name="beforeMethod"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- lm.lmSolution.DriverTakeOrderTests -->
-      <class name="lm.lmSolution.CancelOrderTests">
+      <class name="lm.solution.FetchOrderTests">
         <methods>
           <include name="afterMethod"/>
           <include name="beforeMethod"/>
         </methods>
-      </class> <!-- lm.lmSolution.CancelOrderTests -->
-      <class name="lm.lmSolution.PlaceOrderTests">
+      </class> <!-- lm.solution.FetchOrderTests -->
+      <class name="lm.solution.DriverCompleteOrderTests">
         <methods>
           <include name="beforeMethod"/>
-          <include name="Testcase_placeAdvanceOrder_verifyFareBelowTwoKms_NightCharges"/>
           <include name="afterMethod"/>
         </methods>
-      </class> <!-- lm.lmSolution.PlaceOrderTests -->
+      </class> <!-- lm.solution.DriverCompleteOrderTests -->
+      <class name="lm.solution.DriverTakeOrderTests">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- lm.solution.DriverTakeOrderTests -->
+      <class name="lm.solution.CancelOrderTests">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- lm.solution.CancelOrderTests -->
+      <class name="lm.solution.PlaceOrderTests">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+          <include name="Testcase_placeAdvanceOrder_verifyFareBelowTwoKms"/>
+        </methods>
+      </class> <!-- lm.solution.PlaceOrderTests -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -4,38 +4,38 @@
 <th>Method name</th>
 <th>Groups</th>
 </tr><tr>
-<td>lm.lmSolution.FetchOrderTests</td>
+<td>lm.solution.CancelOrderTests</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@Test</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>TestCase_Fetch_Order_VerifyStatusCode_ValidID</td>
+<td>TestCase_cancel_Order_VerifyStatusCode_InvalidFlow</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>TestCase_Fetch_Order_VerifyStopsCounts_ValidID</td>
+<td>TestCase_Cancel_Order_VerifyOrderstatus_ValidID_AfterTakeOrder</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>TestCase_Fetch_Order_VerifyFareAmount_ValidID</td>
+<td>TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterTakeOrder</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>TestCase_Fetch_Order_VerifyOrderStatusForPlacedOrder</td>
+<td>TestCase_Cancel_Order_VerifyErrorMessage_InvalidID</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>TestCase_Fetch_Order_VerifyStatusCode_InvalidID</td>
+<td>TestCase_Cancel_Order_VerifyStatusCode_InvalidID</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>TestCase_Fetch_Order_VerifyErrorMessage_InvalidID</td>
+<td>TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterPlaceOrder</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>TestCase_Fetch_Order_VerifyDrivingDistances_ValidID</td>
+<td>TestCase_Cancel_Order_VerifyOrderstatus_ValidID_AfterPlaceOrder</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
@@ -58,18 +58,18 @@
 <td align='center' colspan='3'>@AfterClass</td>
 </tr>
 <tr>
-<td>lm.lmSolution.DriverCompleteOrderTests</td>
+<td>lm.solution.DriverCompleteOrderTests</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@Test</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>TestCase_Complete_Order_VerifyErrorMessage_InvalidID</td>
+<td>TestCase_Complete_Order_VerifyStatusCode_ValidID</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>TestCase_Complete_Order_VerifyStatusCode_ValidID</td>
+<td>TestCase_Complete_Order_VerifyErrorMessage_InvalidID</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
@@ -108,18 +108,18 @@
 <td align='center' colspan='3'>@AfterClass</td>
 </tr>
 <tr>
-<td>lm.lmSolution.PlaceOrderTests</td>
+<td>lm.solution.PlaceOrderTests</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@Test</td>
 </tr>
 <tr>
 <td>&nbsp;</td>
-<td>Testcase_placeAdvanceOrder_verifyFareAboveTwoKms_NightCharges</td>
+<td>Testcase_placeOrder_verifyDistancesCount</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>Testcase_placeOrder_verifyDistancesCount</td>
+<td>Testcase_placeAdvanceOrder_verifyFareAboveTwoKms_NightCharges</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
@@ -143,11 +143,11 @@
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>Testcase_placeAdvanceOrder_verifyFareBelowTwoKms_NightCharges</td>
+<td>Testcase_placeOrder_verifySingleStopValue</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
-<td>Testcase_placeOrder_verifySingleStopValue</td>
+<td>Testcase_placeAdvanceOrder_verifyFareBelowTwoKms_NightCharges</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td>&nbsp;</td>
@@ -182,7 +182,61 @@
 <td align='center' colspan='3'>@AfterClass</td>
 </tr>
 <tr>
-<td>lm.lmSolution.DriverTakeOrderTests</td>
+<td>lm.solution.FetchOrderTests</td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@Test</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>TestCase_Fetch_Order_VerifyFareAmount_ValidID</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>TestCase_Fetch_Order_VerifyStopsCounts_ValidID</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>TestCase_Fetch_Order_VerifyStatusCode_ValidID</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>TestCase_Fetch_Order_VerifyOrderStatusForPlacedOrder</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>TestCase_Fetch_Order_VerifyStatusCode_InvalidID</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>TestCase_Fetch_Order_VerifyDrivingDistances_ValidID</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td>&nbsp;</td>
+<td>TestCase_Fetch_Order_VerifyErrorMessage_InvalidID</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@BeforeClass</td>
+</tr>
+<tr>
+<td align='center' colspan='3'>@BeforeMethod</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>beforeMethod</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@AfterMethod</td>
+</tr>
+<tr>
+<td>&nbsp;</td>
+<td>afterMethod</td>
+<td>&nbsp;</td></tr>
+<tr>
+<td align='center' colspan='3'>@AfterClass</td>
+</tr>
+<tr>
+<td>lm.solution.DriverTakeOrderTests</td>
 <td>&nbsp;</td><td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@Test</td>
@@ -206,60 +260,6 @@
 <tr>
 <td>&nbsp;</td>
 <td>TestCase_Take_Order_VerifyOrderStatus_ValidID</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@BeforeClass</td>
-</tr>
-<tr>
-<td align='center' colspan='3'>@BeforeMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>beforeMethod</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterMethod</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>afterMethod</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@AfterClass</td>
-</tr>
-<tr>
-<td>lm.lmSolution.CancelOrderTests</td>
-<td>&nbsp;</td><td>&nbsp;</td></tr>
-<tr>
-<td align='center' colspan='3'>@Test</td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>TestCase_cancel_Order_VerifyStatusCode_InvalidFlow</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterTakeOrder</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>TestCase_Cancel_Order_VerifyOrderstatus_ValidID_AfterTakeOrder</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>TestCase_Cancel_Order_VerifyErrorMessage_InvalidID</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>TestCase_Cancel_Order_VerifyStatusCode_InvalidID</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>TestCase_Cancel_Order_VerifyStatusCode_ValidID_AfterPlaceOrder</td>
-<td>&nbsp;</td></tr>
-<tr>
-<td>&nbsp;</td>
-<td>TestCase_Cancel_Order_VerifyOrderstatus_ValidID_AfterPlaceOrder</td>
 <td>&nbsp;</td></tr>
 <tr>
 <td align='center' colspan='3'>@BeforeClass</td>
